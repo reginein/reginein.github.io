@@ -47,7 +47,7 @@ html{
   margin-left: 200px;
 }
 
-.btn-index{
+#btn-index{
   margin-top: 150px;
   height: 65px;
   padding: 18px 28px;
@@ -137,3 +137,10 @@ html{
   background-size: cover;
 }
 
+#index2 { 
+  background: url("../images/surprise.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

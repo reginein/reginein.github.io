@@ -1,5 +1,9 @@
 $(document).ready( function() {
-	 $("#submit").click(function(){
+	$("#btn-index").click(function(){
+		window.open('./surprise.html', '_blank');
+	});
+
+	$("#submit").click(function(){
 	 	if($("#name-input").val().trim()=="")
 	 		alert("Name cannot be empty.");
 
