@@ -4,12 +4,19 @@ html{
 
 .page-header{
   width: 100%;
-  margin: 0;
   top: 0;
   left: 0;
-	padding-left:20px;
-  position: relative;
-  z-index: 2;
+  margin: 0;
+  padding-left:20px;
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(221, 187, 255, 0.75);
+}
+
+.banner-logo {
+    height: 75px;
+    width: 220px;
+    padding-top: 20px;
 }
 
 .banner-headline{
@@ -18,8 +25,8 @@ html{
   font-size: 28px;
 }
 
-.headline{
-  margin-top: 100px;
+.headline{  
+    margin-top: 150px;
   color: #fff;
 }
 
@@ -30,9 +37,9 @@ html{
   position: relative;
 }
 
-.content-index{
+.index-content{
   height: 50%;
-  width: 95%;
+  width: 90%;
   margin-left: 5%;
   position: relative;
   text-align: center;
@@ -51,7 +58,7 @@ html{
   margin-top: 150px;
   height: 65px;
   padding: 18px 28px;
-  font-size: 30px; //change this to your desired size
+  font-size: 30px; 
   font: black;
   line-height: normal;
   background-color: #008B8B;
@@ -111,7 +118,7 @@ html{
 
 .footer{
   /*border-top: 1px solid #eee;*/
-  width: 100%;
+  /*width: 100%;*/
   height: 100px;
   position: relative;
   bottom: 0;
@@ -123,18 +130,21 @@ html{
 #wrapper{
   height: 100%;
   width: 100%;
-	position:absolute;
+  position:absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
 #index { 
+    margin-top: 50px;
   background: url("../images/index-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 #index2 { 

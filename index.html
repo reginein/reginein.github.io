@@ -1,28 +1,88 @@
 <!DOCTYPE html>
-<html id="index">
-  <head>
-    <title>Kennegine</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-  	<div id="wrapper">
-      <div class="page-header">
-        <h1 class="index-header banner-headline">kennegine</h1>
-        <nav class="index-header">
-          <a href="./snapshot.html">Snapshots</a> |
-          <a href="#">About This Site</a> |
-          <a href="./contact_us.html">Contact Us</a>
-        </nav>
-      </div>
-      <div class="content-index">
-        <h1 class="headline">Welcome to Kenneth and Regine's Website!</h1>        
-        <button type="button" id="btn-index">Smile before you click</button>
-      </div>
-      <div class="footer">This is a footer.
-      </div>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Regine Grace Hisona In</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script language="javascript" type="text/javascript" src="js/angular.js"></script>
+    <script language="javascript" type="text/javascript" src="js/angular-route.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.js"></script>
+    <script language="javascript" type="text/javascript" src="js/app/app.js"></script>
+    <script language="javascript" type="text/javascript" src="js/app/appRoutes.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script language="javascript" type="text/javascript" src="js/app/controllers/mainCtrl.js"></script>
+
+</head>
+<body id="index" ng-app="app" ng-controller="MainController as main" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">    
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>   
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" ng-view>
     </div>
-    <script language="javascript" type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
-    <script language="javascript" type="text/javascript" src="./js/home.js"></script>
-  </body>
+
+    <!--<div id="wrapper">
+        <!--<div class="page-header">
+                <a href="index.html"><img class="banner-logo" src="images/logo-Regine.PNG"/></a>
+                <nav class="index-header pull-right">
+                  <a href="./snapshot.html">Snapshots</a> |
+                  <a href="#">About This Site</a> |
+                  <a href="./contact_us.html">Contact Us</a>
+                </nav>
+            </div>-->
+
+
+    <!--</div>-->
+    <div class="footer">
+        This is a footer.
+    </div>
+</body>
 </html>
