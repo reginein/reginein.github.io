@@ -39,17 +39,18 @@ body {
 }
 
 .body-content {
-    background-color: rgba(255, 255, 255, 0.75);
+    /*background-color: rgba(255, 255, 255, 0.75);*/
     padding: 0;
 }
 
-.content-section {
-    padding-top: 100px;
-    height: 500px;
-}
-
+/*****************About***************/
 #About {
     background-color: pink;
+    padding-top: 150px;
+}
+
+.myCarousel-inner img {
+    max-height: 350px;
 }
 
 #Experience {
@@ -70,6 +71,11 @@ body {
 
 #Etc {
     background-color: aquamarine;
+}
+
+.content-section {
+    padding-top: 100px;
+    height: 500px;
 }
 
 .page-header{   /*not used*/
@@ -139,7 +145,7 @@ body {
   bottom: 0;
   color: #fff;
   padding:20px;
-  /*margin-top: 200px;*/
+  margin-top: 50px;
   background-color: #222;
   border-color: #080808;
   font-size: 14px;
