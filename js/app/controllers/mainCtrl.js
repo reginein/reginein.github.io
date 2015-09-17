@@ -4,4 +4,5 @@ angular.module('app').controller("MainController",
         vm.myInterval = 5000;
         vm.noWrapSlides = false;
         vm.aboutMeSlides = MainFactory.getAboutMeSlides();
+        var workExperiences = MainFactory.getWorkExperiences
 }]);

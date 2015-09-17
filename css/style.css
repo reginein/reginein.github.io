@@ -1,9 +1,19 @@
+@font-face {
+   font-family: 'Fanwood';
+   src: url(../fonts/theleagueof-fanwood/fanwood-webfont.woff);
+}
+
+@font-face {
+   font-family: 'Harry Potter';
+   src: url(../fonts/HARRP___.woff);
+}
+
 html{
     background-color: black;
 }
 
 .banner {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-logo {
@@ -16,6 +26,7 @@ html{
 }
 
 .banner-navbar-collapse {
+    font-family: 'Comic Sans MS';
     text-align: center
 }
 
@@ -45,7 +56,7 @@ body {
 
 .content-section {
     padding-top: 105px;
-    height: 500px;
+    height: auto;
 }
 
 /*****************About***************/
@@ -73,72 +84,11 @@ body {
     background-color: red;
 }
 
-#Etc {
+#Hobbies {
     background-color: aquamarine;
 }
 
-.page-header{   /*not used*/
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding-left:20px;
-  position: fixed;
-  z-index: 1000;
-  background-color: rgba(221, 187, 255, 0.75);
-}
-
-.banner-headline{   /*not used*/
-  color: #fff;
-  font-weight: 300;
-  font-size: 28px;
-}
-
-.headline{/*not used*/  
-  margin-top: 150px;
-  color: #fff;
-}
-
-.content{/*not used*/
-  height: 50%;
-  width: 75%;
-  margin-left: 25%;
-  position: relative;
-}
-
-.index-content{/*not used*/
-  height: 50%;
-  width: 90%;
-  margin-left: 5%;
-  position: relative;
-  text-align: center;
-}
-
-.form-control{/*not used*/
-  margin: 5px;
-}
-
-.btn-success{/*not used*/
-  margin-top: 50px;
-  margin-left: 200px;
-}
-
-#btn-index{/*not used*/
-  margin-top: 150px;
-  height: 65px;
-  padding: 18px 28px;
-  font-size: 30px; 
-  font: black;
-  line-height: normal;
-  background-color: #008B8B;
-  border: none;
-  font-weight: bold;
-  letter-spacing: 0.2px;
-}
-
 .footer{
-  /*border-top: 1px solid #eee;*/
-  /*width: 100%;*/
   height: 200px;
   position: relative;
   bottom: 0;
@@ -150,19 +100,3 @@ body {
   font-size: 14px;
 }
 
-#wrapper{/*not used*/
-  height: 100%;
-  width: 100%;
-  position:absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-#index2 { /*not used*/
-  background: url("../images/surprise.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}}
