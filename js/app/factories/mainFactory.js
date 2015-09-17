@@ -40,7 +40,8 @@
                 location: "Makati City, Philippines",
                 duration: "March 2014 - May 2014",
                 accomplishments: [
-                    "Developed a "
+                    "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
+                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend."
                     ]
             },
             {
@@ -49,16 +50,44 @@
                 location: "Ortigas Center, Pasig City, Philippines",
                 duration: "April 1, 2015 - October 15, 2015",
                 accomplishments: [
-                    "Developed a "
+                    "Helped in the development of Scrum Online, a project management tool specially " +
+                        "designed for scrum projects utilizing Node.js, Backbone, Faye, Express and MongoDB",
+                    "Helped in the maintenance of custom SharePoint projects to enhance user satisfaction"
+
                 ]
             }
         ];
+        var randomScalingFactor = function () {
+            return Math.round(Math.random() * 100);
+        };
+        var skills = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+	  			{
+	  			    fillColor: "rgba(220,220,220,0.5)",
+	  			    strokeColor: "rgba(220,220,220,0.8)",
+	  			    highlightFill: "rgba(220,220,220,0.75)",
+	  			    highlightStroke: "rgba(220,220,220,1)",
+	  			    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+	  			},
+	  			{
+	  			    fillColor: "rgba(151,187,205,0.5)",
+	  			    strokeColor: "rgba(151,187,205,0.8)",
+	  			    highlightFill: "rgba(151,187,205,0.75)",
+	  			    highlightStroke: "rgba(151,187,205,1)",
+	  			    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+	  			}
+            ]
+        };
         return {
             getAboutMeSlides: function () {
                 return aboutMeSlides;
             },
             getWorkExperiences: function () {
                 return workExperiences;
+            },
+            getSkills: function(){
+            return skills;
             }
         }
     }]);

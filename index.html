@@ -16,6 +16,9 @@
     <script language="javascript" type="text/javascript" src="js/lib/angular-animate.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
+		<!--<script src="http://www.chartjs.org/assets/Chart.min.js"></script>-->
+    <script language="javascript" type="text/javascript" src="js/lib/Chart.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/Chart.HorizontalBar.js"></script>
     <script language="javascript" type="text/javascript" src="js/app/app.js"></script>
 
     <!-- ANGULAR CUSTOM -->
@@ -61,10 +64,12 @@
         </div>
         <div id="Experience" class="container-fluid content-section">
             <h1><span class="glyphicon glyphicon-briefcase"></span> Work Experience</h1>
-
         </div>
         <div id="Skills" class="container-fluid content-section">
             <h1><span class="glyphicon glyphicon-pencil"></span> Technical Skills</h1>
+		    <div class="center-block" style="width: 50%">
+			    <canvas id="canvas" height="450" width="600"></canvas>
+		    </div>
         </div>
         <div id="Education" class="container-fluid content-section">
             <h1><span class="glyphicon glyphicon-education"></span> Education</h1>

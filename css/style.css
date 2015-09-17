@@ -68,6 +68,10 @@ body {
     max-height: 350px;
 }
 
+.carousel-control {
+    cursor: pointer;
+}
+
 #Experience {
     background-color: yellow;
 }
