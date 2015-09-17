@@ -12,4 +12,11 @@ angular.module('app').controller("MainController",
             responsive: true,
             barShowStroke: false
         });
+
+        $("#myCarousel").swiperight(function() {  
+            $("#myCarousel").carousel('prev');  
+        });  
+        $("#myCarousel").swipeleft(function() {  
+            $("#myCarousel").carousel('next');  
+        });  
 }]);
