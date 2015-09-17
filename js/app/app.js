@@ -1,3 +1,3 @@
 angular.module('app', [
-    'ui.bootstrap', 'ngAnimate']
+    'ui.bootstrap', 'ngAnimate', 'ngTouch']
 );
