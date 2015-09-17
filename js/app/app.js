@@ -1,2 +1,3 @@
-angular.module('app', ['ngRoute']
+angular.module('app', [
+    'ui.bootstrap', 'ngAnimate']
 );
