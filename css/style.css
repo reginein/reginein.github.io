@@ -1,8 +1,74 @@
 html{
-  background-color: black;
+    background-color: black;
 }
 
-.page-header{
+.navbar-logo {
+    height: 105px;
+}
+
+.banner-logo {
+    height: 75px;
+    width: 220px;
+}
+
+.banner-navbar-collapse {
+    text-align: center
+}
+
+.banner-navbar-nav {
+    display: inline-block; 
+    float: none; 
+    margin-top: 30px; 
+    margin-left: -200px;
+    padding: 0;
+}
+
+body { 
+  background: url("../images/index-background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.body-content {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 0;
+}
+
+.content-section {
+    padding-top: 100px;
+    height: 500px;
+}
+
+#About {
+    background-color: pink;
+}
+
+#Experience {
+    background-color: yellow;
+}
+
+#Skills {
+    background-color: dodgerblue;
+}
+
+#Education {
+    background-color: violet;
+}
+
+#Contact {
+    background-color: red;
+}
+
+#Etc {
+    background-color: aquamarine;
+}
+
+.page-header{   /*not used*/
   width: 100%;
   top: 0;
   left: 0;
@@ -13,31 +79,25 @@ html{
   background-color: rgba(221, 187, 255, 0.75);
 }
 
-.banner-logo {
-    height: 75px;
-    width: 220px;
-    padding-top: 20px;
-}
-
-.banner-headline{
+.banner-headline{   /*not used*/
   color: #fff;
   font-weight: 300;
   font-size: 28px;
 }
 
-.headline{  
-    margin-top: 150px;
+.headline{/*not used*/  
+  margin-top: 150px;
   color: #fff;
 }
 
-.content{
+.content{/*not used*/
   height: 50%;
   width: 75%;
   margin-left: 25%;
   position: relative;
 }
 
-.index-content{
+.index-content{/*not used*/
   height: 50%;
   width: 90%;
   margin-left: 5%;
@@ -45,16 +105,16 @@ html{
   text-align: center;
 }
 
-.form-control{
+.form-control{/*not used*/
   margin: 5px;
 }
 
-.btn-success{
+.btn-success{/*not used*/
   margin-top: 50px;
   margin-left: 200px;
 }
 
-#btn-index{
+#btn-index{/*not used*/
   margin-top: 150px;
   height: 65px;
   padding: 18px 28px;
@@ -67,67 +127,21 @@ html{
   letter-spacing: 0.2px;
 }
 
-.albums{
-  margin: 20px;
-  height: 1000px;
-  width: 98%;
-}
-
-.album{
-  border: solid 1px pink;
-  float:left;
-  text-align: center;
-  margin: 5px;
-  width:418px;
-}
-
-.album_preview{
-  padding:2px;
-  height: 260px;
-  width: 410px;
-  margin: 2px;
-}
-
-.album_image{
-  height: 250px;
-  width: 400px;
-}
-
-.caption_text{
-  margin: 5px;
-  font: italic 12px Georgia, serif;
-  width: 400px;
-  white-space: normal;
-}
-
-.title_text{
-  margin: 5px;
-  font: bold 16px Georgia, serif;
-  width: 400px;
-  white-space: normal;
-}
-
-.date_text{
-
-}
-
-.caption_text_div, .title_text_div{
-  height: 75px;
-  overflow: auto;
-}
-
 .footer{
   /*border-top: 1px solid #eee;*/
   /*width: 100%;*/
-  height: 100px;
+  height: 200px;
   position: relative;
   bottom: 0;
   color: #fff;
   padding:20px;
-  margin-top: 200px;
+  /*margin-top: 200px;*/
+  background-color: #222;
+  border-color: #080808;
+  font-size: 14px;
 }
 
-#wrapper{
+#wrapper{/*not used*/
   height: 100%;
   width: 100%;
   position:absolute;
@@ -136,21 +150,10 @@ html{
   z-index: 1;
 }
 
-#index { 
-    margin-top: 50px;
-  background: url("../images/index-background.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
-#index2 { 
+#index2 { /*not used*/
   background: url("../images/surprise.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+}}
