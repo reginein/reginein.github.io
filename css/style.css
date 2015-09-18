@@ -93,6 +93,10 @@ body {
     background-color: red;
 }
 
+.social-icons .icon-block{
+    margin-bottom: 10px;
+}
+
 #Hobbies {
     background-color: aquamarine;
 }
