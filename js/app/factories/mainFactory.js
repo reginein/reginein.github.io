@@ -33,6 +33,16 @@
             }
         ];
 
+        var accounts = {
+            email: "mailto:reginegracein@gmail.com",
+            github: "https://github.com/reginein",
+            linkedin: "ph.linkedin.com/in/reginein",
+            gplus: "https://plus.google.com/u/0/+RegineGraceIn/posts",
+            facebook: "https://www.facebook.com/regineIN",
+            twitter: "https://twitter.com/regineinnnn",
+            instagram: "https://instagram.com/cheerygine/"
+        };
+
         var workExperiences = [
             {
                 jobTitle: "Intern",
@@ -75,6 +85,9 @@
         return {
             getAboutMeSlides: function () {
                 return aboutMeSlides;
+            },
+            getAccounts: function () {
+                return accounts;
             },
             getWorkExperiences: function () {
                 return workExperiences;
