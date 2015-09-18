@@ -88,6 +88,24 @@
     <div class="container body-content">
         <div id="Experience" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-briefcase"></span> Work Experience</h2>
+            <div class="row container experience-container" ng-repeat="experience in main.workExperiences">
+                <div class="row">
+                    <div class="col-md-7 col-xs-7 col-sm-7 col-lg-7">
+                        <h3>{{experience.jobTitle}} at {{experience.company}}</h3>
+                        <em>({{experience.location}})</em>
+                    </div>
+                    <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5">
+                        <br />
+                        {{experience.duration}}
+                    </div>
+                </div>
+                <div class="row container">
+                    <b><em>Achievement Highlights:</em></b>
+                    <ul>
+                        <li ng-repeat="achievement in experience.achievements">{{achievement}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div id="Skills" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-wrench"></span> Technical Skills</h2>

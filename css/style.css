@@ -74,6 +74,13 @@ body {
     background-color: yellow;
 }
 
+.experience-container{
+    background-color: gray;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
 #Skills {
     background-color: dodgerblue;
 }
