@@ -1,7 +1,7 @@
 angular.module('app').controller("MainController",
     [ 'MainFactory', function (MainFactory) {
         var vm = this;
-        vm.myInterval = 5000;
+        vm.myInterval = 0;
         vm.noWrapSlides = false;
         vm.aboutMeSlides = MainFactory.getAboutMeSlides();
         var workExperiences = MainFactory.getWorkExperiences();
