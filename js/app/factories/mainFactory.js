@@ -2,7 +2,7 @@
     [function () {
         var aboutMeSlides = [
             {
-                image: "images/aboutme-1.jpg",
+                image: "images/aboutme-1.png",
                 active: true,
                 alt: "Regine In"
             },
