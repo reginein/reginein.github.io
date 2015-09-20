@@ -40,7 +40,7 @@
             gplus: "https://plus.google.com/u/0/+RegineGraceIn/posts",
             facebook: "https://www.facebook.com/regineIN",
             twitter: "https://twitter.com/regineinnnn",
-            instagram: "https://instagram.com/cheerygine/"
+            instagram: "https://instagram.com/amiinorout/"
         };
 
         var workExperiences = [
@@ -69,18 +69,22 @@
                 ]
             }
         ];
-        var randomScalingFactor = function () {
-            return Math.round(Math.random() * 100);
-        };
+
         var skills = {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            //labels: ["JavaScript", "Back-end Development", "JQuery", "HTML", "NoSQL (MongoDB)",
+            //        "SQL (MySQL)", "CSS", "C#", "Git"],
+            labels: ["Git", "C#", "CSS", "SQL (MySQL)", "NoSQL (MongoDB)",
+                    "HTML", "JQuery", "Back-end Development", "JavaScript"],
             datasets: [
 	  			{
-	  			    fillColor: "rgba(220,220,220,0.5)",
-	  			    strokeColor: "rgba(220,220,220,0.8)",
-	  			    highlightFill: "rgba(220,220,220,0.75)",
-	  			    highlightStroke: "rgba(220,220,220,1)",
-	  			    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+	  			    fillColor: "rgba(209,35,197,0.5)",
+	  			    //strokeColor: "rgba(220,220,220,0.8)",
+	  			    //highlightFill: "rgba(220,220,220,0.75)",
+	  			    //highlightStroke: "rgba(220,220,220,1)",
+	  			    //data: [8, 8, 8, 9, 8,
+	  			    //        9, 7, 7, 9]
+	  			    data: [9, 7, 7, 9, 8,
+	  			            9, 8, 8, 8]
 	  			}
             ]
         };

@@ -11,6 +11,11 @@ angular.module('app').controller("MainController",
         var ctx = document.getElementById("canvas").getContext("2d");
         var chart = new Chart(ctx).HorizontalBar(vm.skills, {
             responsive: true,
-            barShowStroke: false
+            barShowStroke: false,
+            scaleOverride: true,
+            scaleSteps: 10,
+            scaleStepWidth: 1,
+            scaleStartValue: 0,
+            scaleFontColor: "black"
         });
 }]);
