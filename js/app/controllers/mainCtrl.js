@@ -7,7 +7,7 @@ angular.module('app').controller("MainController",
         vm.accounts = MainFactory.getAccounts();
         vm.workExperiences = MainFactory.getWorkExperiences();
         vm.skills = MainFactory.getSkills();
-
+        vm.otherSkills = MainFactory.getOtherSkills();
         var ctx = document.getElementById("canvas").getContext("2d");
         var chart = new Chart(ctx).HorizontalBar(vm.skills, {
             responsive: true,
@@ -18,4 +18,6 @@ angular.module('app').controller("MainController",
             scaleStartValue: 0,
             scaleFontColor: "black"
         });
+        vm.socialAccountsCaption = MainFactory.getSocialAccountsCaption();
+        vm.education = MainFactory.getEducation();
 }]);

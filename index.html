@@ -47,8 +47,8 @@
                     <li class="active"><a href="#About">ABOUT ME<span class="sr-only">(current)</span></a></li>
                     <li><a href="#Experience">WORK EXPERIENCE</a></li>
                     <li><a href="#Skills">SKILLS</a></li>
-                    <li><a href="#Contact">CONTACT ME</a></li>
                     <li><a href="#Education">EDUCATION</a></li>
+                    <li><a href="#Contact">CONTACT ME</a></li>
                     <li><a href="#Hobbies">HOBBIES ETC.</a></li>
                 </ul>
             </div>
@@ -109,35 +109,87 @@
         </div>
         <div id="Skills" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-wrench"></span> Technical Skills</h2>
-		    <div class="center-block" style="width: 75%">
+		    <div class="center-block" style="width: 95%">
 			    <canvas id="canvas" height="450" width="800"></canvas>
 		    </div>
-        </div>
-        <div id="Contact" class="container-fluid content-section">
-            <h2><span class="glyphicon glyphicon-earphone"></span> Contact Me</h2>
-            <div class="text-center social-icons col-md-4 col-xs-12 col-sm-12 col-lg-4 col-md-offset-1">
-                <a class="btn btn-social btn-linkedin btn-block" href="{{main.accounts.linkedin}}" target="_blank">
-                    <i class="fa fa-linkedin"></i>Visit my LinkedIn profile.
-                </a>
-                <a class="btn btn-social btn-github btn-block" href="{{main.accounts.github}}" target="_blank">
-                    <i class="fa fa-github"></i>View my GitHub repositories.
-                </a>
-                <a class="btn btn-social btn-facebook btn-block" href="{{main.accounts.facebook}}" target="_blank">
-                    <i class="fa fa-facebook"></i>Add me on Facebook.
-                </a>
-                <a class="btn btn-social btn-twitter btn-block" href="{{main.accounts.twitter}}" target="_blank">
-                    <i class="fa fa-twitter"></i>Follow me on Twitter.
-                </a>
-                <a class="btn btn-social btn-instagram btn-block" href="{{main.accounts.instagram}}" target="_blank">
-                    <i class="fa fa-instagram"></i>Check out my Instagram photos.
-                </a>
-            </div>
-            <div class="col-md-6 col-xs-12 col-sm-12 col-lg-6">
-                There's a form here...........
+            <h3>I also have experience with...</h3>
+            <div class="row">
+                <ul class="other-skills" ng-repeat="skill in main.otherSkills">
+                    <li title="{{skill.name}}">
+                        <img class="skill-img" ng-src="{{skill.image}}" />
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="Education" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-education"></span> Education</h2>
+            <div class="row" ng-repeat="education in main.education">
+                <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
+                    <img class="school-logo" ng-src="{{education.schoolLogo}}"/>
+                </div> 
+                <div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
+                    <p>
+                        <b class="-xlarge-font">{{education.course}}</b>
+                        <br />
+                        <span class="-large-font">{{education.school}}</span>
+                        <br />
+                        <em class="-large-font">{{education.duration}}</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="Contact" class="container-fluid content-section">
+            <h2><span class="glyphicon glyphicon-earphone"></span> Contact Me</h2>
+            <div class="text-center social-icons col-md-4 col-xs-12 col-sm-12 col-lg-4">
+                <a class="btn btn-social btn-linkedin btn-block" href="{{main.accounts.linkedin}}"
+                   target="_blank" title="{{main.socialAccountsCaption.linkedin}}">
+                    <i class="fa fa-linkedin"></i>{{main.socialAccountsCaption.linkedin}}
+                </a>
+                <a class="btn btn-social btn-github btn-block" href="{{main.accounts.github}}"
+                   target="_blank" title="{{main.socialAccountsCaption.github}}">
+                    <i class="fa fa-github"></i>{{main.socialAccountsCaption.github}}
+                </a>
+                <a class="btn btn-social btn-facebook btn-block" href="{{main.accounts.facebook}}"
+                   target="_blank" title="{{main.socialAccountsCaption.facebook}}">
+                    <i class=" fa fa-facebook"></i>{{main.socialAccountsCaption.facebook}}
+                </a>
+                <a class="btn btn-social btn-twitter btn-block" href="{{main.accounts.twitter}}"
+                   target="_blank" title="{{main.socialAccountsCaption.twitter}}">
+                    <i class="fa fa-twitter"></i>{{main.socialAccountsCaption.twitter}}
+                </a>
+                <a class="btn btn-social btn-instagram btn-block" href="{{main.accounts.instagram}}"
+                   target="_blank" title="{{main.socialAccountsCaption.instagram}}">
+                    <i class="fa fa-instagram"></i>{{main.socialAccountsCaption.instagram}}
+                </a>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-12 col-lg-6 col-md-offset-1">
+                <h3>Email Me:</h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="name">Name:</label>
+                        <div>
+                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email:</label>
+                        <div>
+                            <input type="email" class="form-control" id="email" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="message">Message:</label>
+                        <div>
+                            <textarea class="form-control contactform-message" id="contactform-message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-info center-block">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div id="Hobbies" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-headphones"></span> Hobbies and Trivias About Me</h2>

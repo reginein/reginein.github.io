@@ -43,6 +43,16 @@
             instagram: "https://instagram.com/amiinorout/"
         };
 
+        var socialAccountsCaption = {
+            email: "Send me an email",
+            github: "View my GitHub repositories.",
+            linkedin: "Visit my LinkedIn profile.",
+            gplus: "",
+            facebook: "Add me on Facebook.",
+            twitter: "Follow me on Twitter.",
+            instagram: "Check out my Instagram photos."
+        }
+
         var workExperiences = [
             {
                 jobTitle: "Intern",
@@ -88,6 +98,63 @@
 	  			}
             ]
         };
+
+        var otherSkills = [
+            {
+                name: "PHP",
+                image: "images/logos/php.png"
+            },
+            {
+                name: "Laravel",
+                image: "images/logos/laravel.png"
+            },
+            {
+                name: "Node.js",
+                image: "images/logos/nodejs.png"
+            },
+            {
+                name: "Bootstrap",
+                image: "images/logos/bootstrap.png"
+            },
+            {
+                name: "AngularJS",
+                image: "images/logos/angularjs.png"
+            },
+            {
+                name: "MVC Framework",
+                image: "images/logos/mvc.png"
+            },
+            {
+                name: "BackboneJS",
+                image: "images/logos/backbonejs.png"
+            },
+            {
+                name: "Express",
+                image: "images/logos/express.png"
+            },
+            {
+                name: "Java",
+                image: "images/logos/java.png"
+            },
+            {
+                name: "npm",
+                image: "images/logos/npm.png"
+            },
+            {
+                name: "Bower",
+                image: "images/logos/bower.png"
+            }
+        ];
+
+        var education = [
+            {
+                course: "Bachelor of Science in Computer Science",
+                school: "Polytechnic University of the Philippines - Main",
+                duration: "June 2011- April 2015",
+                schoolLogo: "images/PUPLogo.png"
+            }
+        ];
+
         return {
             getAboutMeSlides: function () {
                 return aboutMeSlides;
@@ -100,6 +167,15 @@
             },
             getSkills: function(){
             return skills;
+            },
+            getSocialAccountsCaption: function () {
+                return socialAccountsCaption;
+            },
+            getOtherSkills: function () {
+                return otherSkills;
+            },
+            getEducation: function () {
+                return education;
             }
         }
     }]);

@@ -68,8 +68,10 @@ body {
 
 .social-icons{
     padding: 20px;
+    padding-top: 70px;
 }
 
+/*****************Experience***************/
 #Experience {
     background-color: yellow;
 }
@@ -81,14 +83,39 @@ body {
     margin-bottom: 5px;
 }
 
+/*****************Skills***************/
 #Skills {
     background-color: dodgerblue;
 }
 
+.other-skills{
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.other-skills li{
+    padding: 0;
+    margin-right: 20px;
+}
+
+.other-skills .skill-img{
+    max-width: 75px;
+    max-height: 75px;
+}
+
+/*****************Education***************/
 #Education {
     background-color: violet;
 }
 
+.school-logo{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/*****************Contact***************/
 #Contact {
     background-color: red;
 }
@@ -97,10 +124,16 @@ body {
     margin-bottom: 10px;
 }
 
+.contactform-message{
+    height: 400px;
+}
+
+/*****************Hobbies***************/
 #Hobbies {
     background-color: aquamarine;
 }
 
+/*****************Footer***************/
 .footer{
   height: 200px;
   position: relative;
@@ -113,3 +146,16 @@ body {
   font-size: 14px;
 }
 
+/*****************Helper Classes***************/
+.-large-font{
+    font-size: large !important;
+}
+.-larger-font{
+    font-size: larger !important;
+}
+.-xlarge-font{
+    font-size: x-large !important;
+}
+.-xxlarge-font{
+    font-size: xx-large !important;
+}
