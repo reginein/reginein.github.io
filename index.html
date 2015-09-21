@@ -40,7 +40,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand navbar-logo" href="index.html#About"><img class="banner-logo" src="images/logo-Regine.PNG"/></a>
+                <a class="navbar-brand navbar-logo" href="index.html#About">
+                    <img class="banner-logo" src="images/logo-Regine.PNG" alt="Regine In"/>
+                </a>
             </div>   
             <div class="collapse navbar-collapse banner-navbar-collapse" id="myNavBar">
                 <ul class="nav navbar-nav banner-navbar-nav">
@@ -116,7 +118,7 @@
             <div class="row">
                 <ul class="other-skills" ng-repeat="skill in main.otherSkills">
                     <li title="{{skill.name}}">
-                        <img class="skill-img" ng-src="{{skill.image}}" />
+                        <img class="skill-img" ng-src="{{skill.image}}" alt="{{skill.name}}"/>
                     </li>
                 </ul>
             </div>
@@ -125,7 +127,7 @@
             <h2><span class="glyphicon glyphicon-education"></span> Education</h2>
             <div class="row" ng-repeat="education in main.education">
                 <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
-                    <img class="school-logo" ng-src="{{education.schoolLogo}}"/>
+                    <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}"/>
                 </div> 
                 <div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
                     <p>

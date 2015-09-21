@@ -81,8 +81,6 @@
         ];
 
         var skills = {
-            //labels: ["JavaScript", "Back-end Development", "JQuery", "HTML", "NoSQL (MongoDB)",
-            //        "SQL (MySQL)", "CSS", "C#", "Git"],
             labels: ["Git", "C#", "CSS", "SQL (MySQL)", "NoSQL (MongoDB)",
                     "HTML", "JQuery", "Back-end Development", "JavaScript"],
             datasets: [
@@ -91,8 +89,6 @@
 	  			    //strokeColor: "rgba(220,220,220,0.8)",
 	  			    //highlightFill: "rgba(220,220,220,0.75)",
 	  			    //highlightStroke: "rgba(220,220,220,1)",
-	  			    //data: [8, 8, 8, 9, 8,
-	  			    //        9, 7, 7, 9]
 	  			    data: [9, 7, 7, 9, 8,
 	  			            9, 8, 8, 8]
 	  			}
@@ -102,47 +98,43 @@
         var otherSkills = [
             {
                 name: "PHP",
-                image: "images/logos/php.png"
+                image: "images/logos/php.svg"
             },
             {
                 name: "Laravel",
-                image: "images/logos/laravel.png"
+                image: "images/logos/laravel.svg"
             },
             {
                 name: "Node.js",
-                image: "images/logos/nodejs.png"
+                image: "images/logos/nodejs.svg"
             },
             {
                 name: "Bootstrap",
-                image: "images/logos/bootstrap.png"
+                image: "images/logos/bootstrap.svg"
             },
             {
                 name: "AngularJS",
-                image: "images/logos/angularjs.png"
-            },
-            {
-                name: "MVC Framework",
-                image: "images/logos/mvc.png"
+                image: "images/logos/angularjs.svg"
             },
             {
                 name: "BackboneJS",
-                image: "images/logos/backbonejs.png"
+                image: "images/logos/backbonejs.svg"
             },
             {
                 name: "Express",
-                image: "images/logos/express.png"
+                image: "images/logos/express.svg"
             },
             {
                 name: "Java",
-                image: "images/logos/java.png"
+                image: "images/logos/java.svg"
             },
             {
                 name: "npm",
-                image: "images/logos/npm.png"
+                image: "images/logos/npm.svg"
             },
             {
                 name: "Bower",
-                image: "images/logos/bower.png"
+                image: "images/logos/bower.svg"
             }
         ];
 
@@ -151,7 +143,8 @@
                 course: "Bachelor of Science in Computer Science",
                 school: "Polytechnic University of the Philippines - Main",
                 duration: "June 2011- April 2015",
-                schoolLogo: "images/PUPLogo.png"
+                schoolLogo: "images/PUPLogo.png",
+                imgAlt: "PUP logo"
             }
         ];
 
