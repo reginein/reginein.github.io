@@ -17,7 +17,8 @@ angular.module('app').controller("MainController",
                 scaleSteps: 10,
                 scaleStepWidth: 1,
                 scaleStartValue: 0,
-                scaleFontColor: "black"
+                scaleFontColor: "black",
+                scaleFontSize: 14,
             });
         }
         vm.socialAccountsCaption = MainFactory.getSocialAccountsCaption();
