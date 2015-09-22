@@ -7,12 +7,23 @@ html{
 }
 
 .navbar-logo {
-    height: 105px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.banner-logo {
+.navbar-logo-img {
     height: 75px;
     width: 220px;
+}
+
+.social-icons-mini{
+    padding: 5px;
+    display: inline-block;
+}
+
+.social-icons-mini .social-icon{
+    border-radius: 40px;
 }
 
 .banner-navbar-collapse {
@@ -23,7 +34,7 @@ html{
 .banner-navbar-nav {
     display: inline-block; 
     float: none; 
-    margin-top: 30px; 
+    margin-top: 20px; 
     padding: 0;
 }
 
@@ -36,7 +47,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  padding-top: 105px;
+  /*padding-top: 105px;*/
 }
 
 .body-content {
@@ -45,7 +56,7 @@ body {
 }
 
 .content-section {
-    padding-top: 105px;
+    /*padding-top: 105px;*/
     padding-bottom: 30px;
     height: auto;
 }
@@ -67,7 +78,6 @@ body {
 }
 
 .social-icons{
-    padding: 20px;
     padding-top: 70px;
 }
 
@@ -111,8 +121,8 @@ body {
 }
 
 .school-logo{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 75px;
+    max-height: 75px;
 }
 
 /*****************Contact***************/
@@ -120,12 +130,12 @@ body {
     /*background-color: red;*/
 }
 
-.social-icons .icon-block{
-    margin-bottom: 10px;
-}
-
 .contactform-message{
     height: 400px;
+}
+
+.contact-address {
+    margin-bottom: 10px;
 }
 
 /*****************Hobbies***************/
@@ -146,6 +156,16 @@ body {
   font-size: 14px;
 }
 
+.footer .social-icons-mini {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.footer .rights-reserved {
+    position: absolute;
+    bottom: 0;
+}
 /*****************Helper Classes***************/
 .-large-font{
     font-size: large !important;
@@ -158,4 +178,10 @@ body {
 }
 .-xxlarge-font{
     font-size: xx-large !important;
+}
+.-bold-font {
+    font-weight: bold;
+}
+.-italic-font {
+    font-style: italic;
 }

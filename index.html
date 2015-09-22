@@ -14,13 +14,13 @@
 
     <!-- JS -->
     <script language="javascript" type="text/javascript" src="js/lib/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/jquery.zoom-scroller.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/angular.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/angular-touch.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/angular-animate.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
-		<!--<script src="http://www.chartjs.org/assets/Chart.min.js"></script>-->
     <script language="javascript" type="text/javascript" src="js/lib/Chart.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/Chart.HorizontalBar.js"></script>
     <script language="javascript" type="text/javascript" src="js/app/app.js"></script>
@@ -31,7 +31,7 @@
 
 </head>
 <body ng-app="app" ng-controller="MainController as main" data-spy="scroll" data-target=".navbar" data-offset="100">
-    <nav class="navbar navbar-inverse navbar-fixed-top banner">
+    <nav class="navbar navbar-inverse banner">
         <div class="container-fluid">    
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavBar" aria-expanded="false">
@@ -41,9 +41,26 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand navbar-logo" href="index.html#About">
-                    <img class="banner-logo" src="images/logo-Regine.PNG" alt="Regine In"/>
+                    <img class="navbar-logo-img" src="images/logo-Regine.PNG" alt="Regine In"/>
                 </a>
             </div>   
+            <div class="text-center social-icons-mini pull-right">
+                <a class="btn btn-social-icon btn-github social-icon" href="{{main.accounts.github}}" target="_blank" title="Github">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a class="btn btn-social-icon btn-linkedin social-icon" href="{{main.accounts.linkedin}}" target="_blank" title="LinkedIn">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a class="btn btn-social-icon btn-facebook social-icon" href="{{main.accounts.facebook}}" target="_blank" title="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn btn-social-icon btn-twitter social-icon" href="{{main.accounts.twitter}}" target="_blank" title="Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social-icon btn-instagram social-icon" href="{{main.accounts.instagram}}" target="_blank" title="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
             <div class="collapse navbar-collapse banner-navbar-collapse" id="myNavBar">
                 <ul class="nav navbar-nav banner-navbar-nav">
                     <li class="active"><a href="#About">ABOUT ME<span class="sr-only">(current)</span></a></li>
@@ -58,36 +75,17 @@
     </nav>
     <div class="container body-content">
         <div id="About" class="container-fluid content-section">
-            <div class="container">
-                <carousel id="myCarousel" interval="main.myInterval" no-wrap="main.noWrapSlides" ng-animate="false">
-                    <slide class="slide" ng-repeat="slide in main.aboutMeSlides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:auto;" alt="{{slide.alt}}">
-                        <div class="carousel-caption">
-                            <h4></h4>
-                            <p></p>
-                        </div>
-                    </slide>
-                </carousel>
-                <!--<div class="text-center social-icons">
-                    <a class="btn btn-social-icon btn-github" href="{{main.accounts.github}}" target="_blank" title="Github">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a class="btn btn-social-icon btn-linkedin" href="{{main.accounts.linkedin}}" target="_blank" title="LinkedIn">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a class="btn btn-social-icon btn-facebook" href="{{main.accounts.facebook}}" target="_blank" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a class="btn btn-social-icon btn-twitter" href="{{main.accounts.twitter}}" target="_blank" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-social-icon btn-instagram" href="{{main.accounts.instagram}}" target="_blank" title="Instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </div>-->
-                <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft" href="#Contact">CONTACT ME </a>
-                </div>
+            <carousel id="myCarousel" interval="main.myInterval" no-wrap="main.noWrapSlides" ng-animate="false">
+                <slide class="slide" ng-repeat="slide in main.aboutMeSlides" active="slide.active">
+                    <img ng-src="{{slide.image}}" style="margin:auto;" alt="{{slide.alt}}">
+                    <div class="carousel-caption">
+                        <h4></h4>
+                        <p></p>
+                    </div>
+                </slide>
+            </carousel>
+            <div class="text-center">
+                <a class="btn btn-lg btn-microsoft" href="#Contact">CONTACT ME </a>
             </div>
         </div>
         <div id="Experience" class="container-fluid content-section">
@@ -114,7 +112,7 @@
         <div id="Skills" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-wrench"></span> Technical Skills</h2>
             <div class="center-block" style="width: 95%">
-                <canvas id="canvas" height="450" width="800"></canvas>
+                <canvas id="skillsCanvas" height="450" width="800"></canvas>
             </div>
             <h3>I also have experience with...</h3>
             <div class="container">
@@ -129,76 +127,80 @@
         </div>
         <div id="Education" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-education"></span> Education</h2>
-            <div class="container">
-                <div class="row" ng-repeat="education in main.education">
-                    <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
-                        <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
-                    </div>
-                    <div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
-                        <p>
-                            <b class="-xlarge-font">{{education.course}}</b>
-                            <br />
-                            <span class="-large-font">{{education.school}}</span>
-                            <br />
-                            <em class="-large-font">{{education.duration}}</em>
-                        </p>
-                    </div>
+            <div class="row" ng-repeat="education in main.education">
+                <div class="col-md-1 col-lg-1 col-xs-12 col-sm-2">
+                    <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
+                </div>
+                <div class="col-md-11 col-lg-11 col-xs-12 col-sm-10">
+                    <p>
+                        <b class="-xlarge-font">{{education.course}}</b>
+                        <br />
+                        <span class="-large-font">{{education.school}}</span>
+                        <br />
+                        <em class="-large-font">{{education.duration}}</em>
+                    </p>
                 </div>
             </div>
         </div>
         <div id="Contact" class="container-fluid content-section">
             <h2><span class="glyphicon glyphicon-earphone"></span> Contact Me</h2>
-            <div class="container">
-                <div class="text-center social-icons col-md-4 col-xs-12 col-sm-12 col-lg-4">
-                    <a class="btn btn-social btn-linkedin btn-block" href="{{main.accounts.linkedin}}"
-                        target="_blank" title="{{main.socialAccountsCaption.linkedin}}">
-                        <i class="fa fa-linkedin"></i>{{main.socialAccountsCaption.linkedin}}
-                    </a>
-                    <a class="btn btn-social btn-github btn-block" href="{{main.accounts.github}}"
-                        target="_blank" title="{{main.socialAccountsCaption.github}}">
-                        <i class="fa fa-github"></i>{{main.socialAccountsCaption.github}}
-                    </a>
-                    <a class="btn btn-social btn-facebook btn-block" href="{{main.accounts.facebook}}"
-                        target="_blank" title="{{main.socialAccountsCaption.facebook}}">
-                        <i class=" fa fa-facebook"></i>{{main.socialAccountsCaption.facebook}}
-                    </a>
-                    <a class="btn btn-social btn-twitter btn-block" href="{{main.accounts.twitter}}"
-                        target="_blank" title="{{main.socialAccountsCaption.twitter}}">
-                        <i class="fa fa-twitter"></i>{{main.socialAccountsCaption.twitter}}
-                    </a>
-                    <a class="btn btn-social btn-instagram btn-block" href="{{main.accounts.instagram}}"
-                        target="_blank" title="{{main.socialAccountsCaption.instagram}}">
-                        <i class="fa fa-instagram"></i>{{main.socialAccountsCaption.instagram}}
-                    </a>
+            <!--<div class="text-center social-icons col-md-4 col-xs-12 col-sm-12 col-lg-4">
+                <a class="btn btn-social btn-linkedin btn-block" href="{{main.accounts.linkedin}}"
+                    target="_blank" title="{{main.socialAccountsCaption.linkedin}}">
+                    <i class="fa fa-linkedin"></i>{{main.socialAccountsCaption.linkedin}}
+                </a>
+                <a class="btn btn-social btn-github btn-block" href="{{main.accounts.github}}"
+                    target="_blank" title="{{main.socialAccountsCaption.github}}">
+                    <i class="fa fa-github"></i>{{main.socialAccountsCaption.github}}
+                </a>
+                <a class="btn btn-social btn-facebook btn-block" href="{{main.accounts.facebook}}"
+                    target="_blank" title="{{main.socialAccountsCaption.facebook}}">
+                    <i class=" fa fa-facebook"></i>{{main.socialAccountsCaption.facebook}}
+                </a>
+                <a class="btn btn-social btn-twitter btn-block" href="{{main.accounts.twitter}}"
+                    target="_blank" title="{{main.socialAccountsCaption.twitter}}">
+                    <i class="fa fa-twitter"></i>{{main.socialAccountsCaption.twitter}}
+                </a>
+                <a class="btn btn-social btn-instagram btn-block" href="{{main.accounts.instagram}}"
+                    target="_blank" title="{{main.socialAccountsCaption.instagram}}">
+                    <i class="fa fa-instagram"></i>{{main.socialAccountsCaption.instagram}}
+                </a>
+            </div>-->
+            <div class="col-md-6 col-lg-6 col-xs-10 col-sm-8 col-md-offset-3 col-lg-offset-3 col-sm-offset-2 col-xs-offset-1">
+                <div class="text-center contact-address">
+                    <p class="-large-font -bold-font">
+                        <i class="fa fa-home"></i> Caloocan City, Metro Manila, Philippines<br />
+                        <i class="fa fa-envelope"></i> reginegracein@gmail.com
+                    </p>
                 </div>
-                <div class="col-md-6 col-xs-12 col-sm-12 col-lg-6 col-md-offset-1">
-                    <h3>Email Me:</h3>
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="control-label" for="name">Name:</label>
-                            <div>
-                                <input type="text" class="form-control" id="name" placeholder="Your name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email">Email:</label>
-                            <div>
-                                <input type="email" class="form-control" id="email" placeholder="Your email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="message">Message:</label>
-                            <div>
-                                <textarea class="form-control contactform-message" id="contactform-message" placeholder="Your message"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <button type="submit" class="btn btn-info center-block">Submit</button>
-                            </div>
-                        </div>
-                    </form>
+                <div class="row">
+                    <span class="-large-font">Or send me a quick e-mail here...</span>
                 </div>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="control-label" for="name">Name:</label>
+                        <div>
+                            <input type="text" class="form-control" id="name" placeholder="Your name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email:</label>
+                        <div>
+                            <input type="email" class="form-control" id="email" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="message">Message:</label>
+                        <div>
+                            <textarea class="form-control contactform-message" id="contactform-message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-info center-block">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div id="Hobbies" class="container-fluid content-section">
@@ -208,7 +210,26 @@
         </div>
     </div>
     <div class="footer">
-        This is a footer.
+        <div class="rights-reserved">
+            <p><i class="fa fa-copyright"></i>&nbsp;<span id="rightsReservedYear"></span> All Rights Reserved.</p>
+        </div>
+        <div class="text-center social-icons-mini">
+            <a class="btn btn-social-icon btn-github social-icon" href="{{main.accounts.github}}" target="_blank" title="Github">
+                <i class="fa fa-github"></i>
+            </a>
+            <a class="btn btn-social-icon btn-linkedin social-icon" href="{{main.accounts.linkedin}}" target="_blank" title="LinkedIn">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a class="btn btn-social-icon btn-facebook social-icon" href="{{main.accounts.facebook}}" target="_blank" title="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-social-icon btn-twitter social-icon" href="{{main.accounts.twitter}}" target="_blank" title="Twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-social-icon btn-instagram social-icon" href="{{main.accounts.instagram}}" target="_blank" title="Instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
     </div>
 </body>
 </html>
