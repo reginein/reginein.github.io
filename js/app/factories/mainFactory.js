@@ -75,7 +75,8 @@
                     "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
                         "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend." +
                         "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
-                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend."
+                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend.",
+                    "Developed a computer software for the company’s Pre-Employment Assessment Test, "
                 ]
             }
         ];

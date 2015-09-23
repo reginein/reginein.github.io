@@ -61,10 +61,19 @@ body {
     height: auto;
 }
 
+@media all and (orientation: landscape) {
     .content-section .section-header {
         font-size: 4.0vw !important;
+        /*margin-bottom: 20px;*/
+    }
+}
+
+@media all and (orientation: portrait) {
+    .content-section .section-header {
+        font-size: 5.7vw !important;
         margin-bottom: 20px;
     }
+}
 
 .carousel-control {
     cursor: pointer;
@@ -79,7 +88,6 @@ body {
 
 .carousel-content {
     text-align: left;
-    z-index: 1000;
 }
 
 ol.carousel-indicators {
@@ -136,10 +144,19 @@ ol.carousel-indicators {
         /*margin-right: 20px;*/
     }
 
+@media all and (min-width: 480px) {
     .other-skills .skill-img {
         max-width: 150px;
         max-height: 45px;
     }
+}
+
+@media all and (max-width: 480px) {
+    .other-skills .skill-img {
+        max-width: 100px;
+        max-height: 35px;
+    }
+}
 
 /*****************Education***************/
 #Education {
@@ -199,28 +216,69 @@ ol.carousel-indicators {
         bottom: 0;
     }
 /*****************Helper Classes***************/
-.-h1 {
-    font-size: 4.0vw !important;
+
+@media all and (orientation: landscape) {
+    .-h1 {
+        font-size: 4.0vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h2 {
+        font-size: 3.0vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h3 {
+        font-size: 2.5vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h4 {
+        font-size: 2.0vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h5 {
+        font-size: 1.5vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h6 {
+        font-size: 1.25vw !important;
+        line-height: 1.2 !important;
+    }
 }
 
-.-h2 {
-    font-size: 3.0vw !important;
-}
+@media all and (orientation: portrait) {
+    .-h1 {
+        font-size: 5.7vw !important;
+        line-height: 1.2 !important;
+    }
 
-.-h3 {
-    font-size: 2.0vw !important;
-}
+    .-h2 {
+        font-size: 4.0vw !important;
+        line-height: 1.2 !important;
+    }
 
-.-h4 {
-    font-size: 1.5vw !important;
-}
+    .-h3 {
+        font-size: 3.5vw !important;
+        line-height: 1.2 !important;
+    }
 
-.-h5 {
-    font-size: 1.25vw !important;
-}
+    .-h4 {
+        font-size: 3.0vw !important;
+        line-height: 1.2 !important;
+    }
 
-.-h6 {
-    font-size: 0.75vw !important;
+    .-h5 {
+        font-size: 1.5vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .-h6 {
+        font-size: 1.25vw !important;
+        line-height: 1.2 !important;
+    }
 }
 
 .-bold-font {
