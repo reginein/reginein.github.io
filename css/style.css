@@ -1,4 +1,4 @@
-html{
+html {
     background-color: black;
 }
 
@@ -17,36 +17,36 @@ html{
     width: 130px;
 }
 
-.social-icons-mini{
+.social-icons-mini {
     padding: 5px;
     display: inline-block;
 }
 
-.social-icons-mini .social-icon{
-    border-radius: 40px;
-}
+    .social-icons-mini .social-icon {
+        border-radius: 40px;
+    }
 
 .banner-navbar-collapse {
     font-family: 'Comic Sans MS';
-    text-align: center
+    text-align: center;
 }
 
 .banner-navbar-nav {
-    display: inline-block; 
-    float: none; 
-    margin-top: 5px; 
+    display: inline-block;
+    float: none;
+    margin-top: 5px;
     padding: 0;
 }
 
-body { 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  /*background-size: cover;*/
-  height: 100%;
-  width: 100%;
-  position: relative;
-  padding-top: 60px;    /*do not remove this, Regine*/
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*background-size: cover;*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: 60px; /*do not remove this, Regine*/
 }
 
 .body-content {
@@ -61,6 +61,10 @@ body {
     height: auto;
 }
 
+    .content-section .section-header {
+        font-size: xx-large;
+        margin-bottom: 20px;
+    }
 /*****************About***************/
 #About {
     /*background-color: pink;*/
@@ -75,11 +79,7 @@ body {
     max-height: 350px;
 }*/
 
-.carousel-control {
-    cursor: pointer;
-}
-
-.social-icons{
+.social-icons {
     padding-top: 70px;
 }
 
@@ -90,11 +90,26 @@ body {
     background-size: cover;
 }
 
-.experience-container{
+.experience-container {
     background-color: gray;
     border: solid 1px black;
     border-radius: 5px;
     margin-bottom: 5px;
+}
+
+.carousel-control {
+    cursor: pointer;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+    /*opacity: initial;*/
+}
+
+    .carousel-control.left, .carousel-control.right {
+        background-image: none;
+        width: auto;
+    }
+
+.carousel-content {
+    text-align: left;
 }
 
 /*****************Skills***************/
@@ -104,22 +119,22 @@ body {
     background-size: cover;
 }
 
-.other-skills{
+.other-skills {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin-left: 20px;
 }
 
-.other-skills li{
-    padding: 0;
-    /*margin-right: 20px;*/
-}
+    .other-skills li {
+        padding: 0;
+        /*margin-right: 20px;*/
+    }
 
-.other-skills .skill-img{
-    max-width: 150px;
-    max-height: 45px;
-}
+    .other-skills .skill-img {
+        max-width: 150px;
+        max-height: 45px;
+    }
 
 /*****************Education***************/
 #Education {
@@ -128,7 +143,7 @@ body {
     background-size: cover;
 }
 
-.school-logo{
+.school-logo {
     max-width: 75px;
     max-height: 75px;
 }
@@ -140,7 +155,7 @@ body {
     background-size: cover;
 }
 
-.contactform-message{
+.contactform-message {
     height: 400px;
 }
 
@@ -156,44 +171,53 @@ body {
 }
 
 /*****************Footer***************/
-.footer{
-  height: 200px;
-  position: relative;
-  bottom: 0;
-  color: #fff;
-  padding:20px;
-  margin-top: 50px;
-  background-color: #222;
-  border-color: #080808;
-  font-size: 14px;
+.footer {
+    height: 200px;
+    position: relative;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #222;
+    border-color: #080808;
+    font-size: 14px;
 }
 
-.footer .social-icons-mini {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
+    .footer .social-icons-mini {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 
-.footer .rights-reserved {
-    position: absolute;
-    bottom: 0;
-}
+    .footer .rights-reserved {
+        position: absolute;
+        bottom: 0;
+    }
 /*****************Helper Classes***************/
-.-large-font{
+.-large-font {
     font-size: large !important;
 }
-.-larger-font{
+
+.-larger-font {
     font-size: larger !important;
 }
-.-xlarge-font{
+
+.-xlarge-font {
     font-size: x-large !important;
 }
-.-xxlarge-font{
+
+.-xxlarge-font {
     font-size: xx-large !important;
 }
+
 .-bold-font {
     font-weight: bold;
 }
+
 .-italic-font {
     font-style: italic;
+}
+
+.content-section {
+    background: none !important;
 }

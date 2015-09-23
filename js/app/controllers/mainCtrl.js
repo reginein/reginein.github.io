@@ -2,6 +2,7 @@ angular.module('app').controller("MainController",
     ['MainFactory', function (MainFactory) {
         var vm = this;
         vm.myInterval = 0;
+        vm.experienceCarouselInterval = 0;
         vm.noWrapSlides = false;
         vm.aboutMeSlides = MainFactory.getAboutMeSlides();
         vm.accounts = MainFactory.getAccounts();
@@ -12,19 +13,19 @@ angular.module('app').controller("MainController",
         vm.education = MainFactory.getEducation();
 
         $(document).ready(function () {
-            if ($("#skillsCanvas").length > 0) {
-                var ctx = $("#skillsCanvas").get(0).getContext("2d");
-                var chart = new Chart(ctx).HorizontalBar(vm.skills, {
-                    responsive: true,
-                    barShowStroke: false,
-                    scaleOverride: true,
-                    scaleSteps: 10,
-                    scaleStepWidth: 1,
-                    scaleStartValue: 0,
-                    scaleFontColor: "black",
-                    //scaleFontSize: 14,
-                });
-            }
+            //if ($("#skillsCanvas").length > 0) {
+            //    var ctx = $("#skillsCanvas").get(0).getContext("2d");
+            //    var chart = new Chart(ctx).HorizontalBar(vm.skills, {
+            //        responsive: true,
+            //        barShowStroke: false,
+            //        scaleOverride: true,
+            //        scaleSteps: 10,
+            //        scaleStepWidth: 1,
+            //        scaleStartValue: 0,
+            //        scaleFontColor: "black",
+            //        //scaleFontSize: 14,
+            //    });
+            //}
 
             $("#rightsReservedYear").text(new Date().getFullYear());
 
@@ -54,7 +55,7 @@ angular.module('app').controller("MainController",
                 responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
                 // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                 // the browser's width is less than 600, the fallback will kick in.
-                direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+                direction: "horizontal"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
             });
         });
 }]);
