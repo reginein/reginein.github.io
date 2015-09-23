@@ -13,8 +13,8 @@ html{
 }
 
 .navbar-logo-img {
-    height: 75px;
-    width: 220px;
+    height: 50px;
+    width: 130px;
 }
 
 .social-icons-mini{
@@ -34,20 +34,19 @@ html{
 .banner-navbar-nav {
     display: inline-block; 
     float: none; 
-    margin-top: 20px; 
+    margin-top: 5px; 
     padding: 0;
 }
 
 body { 
-  background: url("../images/index-background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  /*background-size: cover;*/
   height: 100%;
   width: 100%;
   position: relative;
-  /*padding-top: 105px;*/
+  padding-top: 60px;    /*do not remove this, Regine*/
 }
 
 .body-content {
@@ -56,14 +55,17 @@ body {
 }
 
 .content-section {
-    /*padding-top: 105px;*/
-    padding-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 40px;
+    /*padding-bottom: 30px;*/
     height: auto;
 }
 
 /*****************About***************/
 #About {
     /*background-color: pink;*/
+    background: url("../images/index-background1.png") no-repeat center center;
+    background-size: cover;
     padding-left: 0;
     padding-right: 0;
 }
@@ -84,6 +86,8 @@ body {
 /*****************Experience***************/
 #Experience {
     /*background-color: yellow;*/
+    background: url("../images/index-background2.png") no-repeat center center;
+    background-size: cover;
 }
 
 .experience-container{
@@ -96,6 +100,8 @@ body {
 /*****************Skills***************/
 #Skills {
     /*background-color: dodgerblue;*/
+    background: url("../images/index-background3.png") no-repeat center center;
+    background-size: cover;
 }
 
 .other-skills{
@@ -107,17 +113,19 @@ body {
 
 .other-skills li{
     padding: 0;
-    margin-right: 20px;
+    /*margin-right: 20px;*/
 }
 
 .other-skills .skill-img{
-    max-width: 200px;
-    max-height: 75px;
+    max-width: 150px;
+    max-height: 45px;
 }
 
 /*****************Education***************/
 #Education {
     /*background-color: violet;*/
+    background: url("../images/index-background4.png") no-repeat center center;
+    background-size: cover;
 }
 
 .school-logo{
@@ -128,6 +136,8 @@ body {
 /*****************Contact***************/
 #Contact {
     /*background-color: red;*/
+    background: url("../images/index-background5.png") no-repeat center center;
+    background-size: cover;
 }
 
 .contactform-message{
@@ -141,6 +151,8 @@ body {
 /*****************Hobbies***************/
 #Hobbies {
     /*background-color: aquamarine;*/
+    background: url("../images/index-background6.png") no-repeat center center;
+    background-size: cover;
 }
 
 /*****************Footer***************/
