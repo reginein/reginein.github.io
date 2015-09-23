@@ -88,7 +88,7 @@
                     </slide>
                 </carousel>-->
                 <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft" href="#Contact">CONTACT ME </a>
+                    <a class="btn btn-lg btn-microsoft -h4" href="#Contact">CONTACT ME </a>
                 </div>
             </div>
         </div>
@@ -97,25 +97,29 @@
                 <span><i class="glyphicon glyphicon-briefcase"></i> Work Experience</span>
             </div>
             <div class="container">
-                <carousel id="experienceCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
+                <carousel id="experienceCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides" resize>
                     <slide class="slide" ng-repeat="experience in main.workExperiences">
                         <div class="carousel-content">
-                            <div class="row">
-                                <div class="col-md-7 col-lg-7">
-                                    <span class="-large-font -bold-font">{{experience.jobTitle}} at {{experience.company}}</span>
-                                    <em>({{experience.location}})</em>
+                            <div class="row" style="margin-right: 0;">
+                                <div class="col-md-9 col-lg-9">
+                                    <span class="-h2 -bold-font">{{experience.jobTitle}} at {{experience.company}}</span>
                                 </div>
-                                <div class="col-md-5 col-lg-5">
-                                    {{experience.duration}}
+                                <div class="col-md-3 col-lg-3">
+                                    <span class="-h3">{{experience.duration}}</span>
                                 </div>
                             </div>
-                            <div>
-                                <span class="-bold-font">Achievement Highlights:</span>
+                            <div style="margin-right: 0;">
+                                <span class="-h4 -italic-font">({{experience.location}})</span>
                             </div>
-                            <div class="row">
-                                <ul>
-                                    <li ng-repeat="achievement in experience.achievements">{{achievement}}</li>
-                                </ul>
+                            <div style="margin-right: 0;">
+                                <span class="-h3 -bold-font">Achievement Highlights:</span>
+                            </div>
+                            <div class="row" style="margin-right: 0;">
+                                <div class="col-md-11 col-lg-11">
+                                    <ul>
+                                        <li class="-h3" ng-repeat="achievement in experience.achievements">{{achievement}}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </slide>
@@ -144,10 +148,28 @@
                 <span><i class="glyphicon glyphicon-wrench"></i> Technical Skills</span>
             </div>
             <div class="container">
+                <carousel id="skillsCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
+                    <slide class="slide">
+                        <div class="carousel-content">
+                        </div>
+                    </slide>
+                    <slide class="slide">
+                        <div class="carousel-content">
+                            <span class="-large-font">I also have experience with...</span>
+                            <div class="row">
+                                <ul class="other-skills" ng-repeat="skill in main.otherSkills">
+                                    <li title="{{skill.name}}">
+                                        <img class="skill-img" ng-src="{{skill.image}}" alt="{{skill.name}}" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </slide>
+                </carousel>
                 <!--<div class="center-block" style="width: inherit; height: inherit;">
                     <canvas id="skillsCanvas" height="20%" width="70%"></canvas>
                 </div>-->
-                <span class="-large-font">I also have experience with...</span>
+                <!--<span class="-large-font">I also have experience with...</span>
                 <div class="container">
                     <div class="row">
                         <ul class="other-skills" ng-repeat="skill in main.otherSkills">
@@ -156,7 +178,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div id="Education" class="container-fluid content-section">
@@ -164,20 +186,24 @@
                 <span><i class="glyphicon glyphicon-education"></i> Education</span>
             </div>
             <div class="container">
-                <div class="row" ng-repeat="education in main.education">
-                    <div class="col-md-1 col-lg-1 col-sm-2">
-                        <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
-                    </div>
-                    <div class="col-md-11 col-lg-11 col-sm-10">
-                        <p>
-                            <b class="-xlarge-font">{{education.course}}</b>
-                            <br />
-                            <span class="-large-font">{{education.school}}</span>
-                            <br />
-                            <em class="-large-font">{{education.duration}}</em>
-                        </p>
-                    </div>
-                </div>
+                <carousel id="educationCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
+                    <slider class="slide" ng-repeat="education in main.education">
+                        <div class="carousel-content">
+                            <div class="col-md-1 col-lg-1 col-sm-2">
+                                <img class="school-logo center-block" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
+                            </div>
+                            <div class="col-md-11 col-lg-11 col-sm-10">
+                                <p>
+                                    <b class="-xlarge-font">{{education.course}}</b>
+                                    <br />
+                                    <span class="-large-font">{{education.school}}</span>
+                                    <br />
+                                    <em class="-large-font">{{education.duration}}</em>
+                                </p>
+                            </div>
+                        </div>
+                    </slider>
+                </carousel>
             </div>
         </div>
         <div id="Contact" class="container-fluid content-section">
@@ -209,13 +235,13 @@
                 </div>-->
                 <div class="col-md-6 col-lg-6 col-xs-10 col-sm-8 col-md-offset-3 col-lg-offset-3 col-sm-offset-2 col-xs-offset-1">
                     <div class="text-center contact-address">
-                        <p class="-large-font -bold-font">
+                        <p class="-h2 -bold-font">
                             <i class="fa fa-home"></i> Caloocan City, Metro Manila, Philippines<br />
                             <i class="fa fa-envelope"></i> reginegracein@gmail.com
                         </p>
                     </div>
                     <div class="row">
-                        <span class="-large-font">Or send me a quick e-mail here...</span>
+                        <span class="-h2">Or send me a quick e-mail here...</span>
                     </div>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">

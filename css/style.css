@@ -56,15 +56,35 @@ body {
 
 .content-section {
     background-color: rgba(255, 255, 255, 0.5);
-    padding-top: 40px;
+    padding-top: 60px;
     /*padding-bottom: 30px;*/
     height: auto;
 }
 
     .content-section .section-header {
-        font-size: xx-large;
+        font-size: 4.0vw !important;
         margin-bottom: 20px;
     }
+
+.carousel-control {
+    cursor: pointer;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .6);
+    /*opacity: initial;*/
+}
+
+    .carousel-control.left, .carousel-control.right {
+        background-image: none;
+        width: auto;
+    }
+
+.carousel-content {
+    text-align: left;
+    z-index: 1000;
+}
+
+ol.carousel-indicators {
+    display: none;
+}
 /*****************About***************/
 #About {
     /*background-color: pink;*/
@@ -95,21 +115,6 @@ body {
     border: solid 1px black;
     border-radius: 5px;
     margin-bottom: 5px;
-}
-
-.carousel-control {
-    cursor: pointer;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, .6);
-    /*opacity: initial;*/
-}
-
-    .carousel-control.left, .carousel-control.right {
-        background-image: none;
-        width: auto;
-    }
-
-.carousel-content {
-    text-align: left;
 }
 
 /*****************Skills***************/
@@ -194,28 +199,36 @@ body {
         bottom: 0;
     }
 /*****************Helper Classes***************/
-.-large-font {
-    font-size: large !important;
+.-h1 {
+    font-size: 4.0vw !important;
 }
 
-.-larger-font {
-    font-size: larger !important;
+.-h2 {
+    font-size: 3.0vw !important;
 }
 
-.-xlarge-font {
-    font-size: x-large !important;
+.-h3 {
+    font-size: 2.0vw !important;
 }
 
-.-xxlarge-font {
-    font-size: xx-large !important;
+.-h4 {
+    font-size: 1.5vw !important;
+}
+
+.-h5 {
+    font-size: 1.25vw !important;
+}
+
+.-h6 {
+    font-size: 0.75vw !important;
 }
 
 .-bold-font {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .-italic-font {
-    font-style: italic;
+    font-style: italic !important;
 }
 
 .content-section {

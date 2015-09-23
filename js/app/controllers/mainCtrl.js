@@ -12,6 +12,22 @@ angular.module('app').controller("MainController",
         vm.socialAccountsCaption = MainFactory.getSocialAccountsCaption();
         vm.education = MainFactory.getEducation();
 
+        vm.setCarouselHeight= function(id) {
+            var slideHeight = [];
+            $(id + ' .item').each(function () {
+                // add all slide heights to an array
+                slideHeight.push($(this).height());
+            });
+
+            // find the tallest item
+            max = Math.max.apply(null, slideHeight);
+
+            // set the slide's height
+            $(id + ' .carousel-content').each(function () {
+                $(this).css('height', max + 'px');
+            });
+        }
+
         $(document).ready(function () {
             //if ($("#skillsCanvas").length > 0) {
             //    var ctx = $("#skillsCanvas").get(0).getContext("2d");
@@ -57,5 +73,35 @@ angular.module('app').controller("MainController",
                 // the browser's width is less than 600, the fallback will kick in.
                 direction: "horizontal"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
             });
+            vm.setCarouselHeight('#experienceCarousel');
         });
-}]);
+
+        
+    }]).directive('resize', function ($window) {
+        return function (scope, element, attr) {
+
+            var w = angular.element($window);
+
+            setCarouselHeight('#experienceCarousel');
+
+            function setCarouselHeight(id) {
+                var slideHeight = [];
+                $(id + ' .item').each(function () {
+                    // add all slide heights to an array
+                    slideHeight.push($(this).height());
+                });
+
+                // find the tallest item
+                max = Math.max.apply(null, slideHeight);
+
+                // set the slide's height
+                $(id + ' .carousel-content').each(function () {
+                    $(this).css('height', max + 'px');
+                });
+            }
+
+            w.bind('resize', function () {
+                scope.$apply();
+            });
+        }
+    });

@@ -55,18 +55,6 @@
 
         var workExperiences = [
             {
-                jobTitle: "Intern",
-                company: "Greystone Data Systems, Inc.",
-                location: "Makati City, Philippines",
-                duration: "March 2014 - May 2014",
-                achievements: [
-                    "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
-                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend." +
-                        "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
-                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend."
-                    ]
-            },
-            {
                 jobTitle: "Software Developer and Systems Support Specialist",
                 company: "Seansoft Corporation",
                 location: "Ortigas Center, Pasig City, Philippines",
@@ -76,6 +64,18 @@
                         "designed for scrum projects utilizing Node.js, Backbone, Faye, Express and MongoDB",
                     "Helped in the maintenance of custom SharePoint projects to enhance user satisfaction"
 
+                ]
+            },
+            {
+                jobTitle: "Intern",
+                company: "Greystone Data Systems, Inc.",
+                location: "Makati City, Philippines",
+                duration: "March 2014 - May 2014",
+                achievements: [
+                    "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
+                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend." +
+                        "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
+                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend."
                 ]
             }
         ];
