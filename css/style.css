@@ -95,9 +95,7 @@ ol.carousel-indicators {
 }
 /*****************About***************/
 #About {
-    /*background-color: pink;*/
-    background: url("../images/index-background1.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(194, 194, 163);
     padding-left: 0;
     padding-right: 0;
 }
@@ -113,9 +111,7 @@ ol.carousel-indicators {
 
 /*****************Experience***************/
 #Experience {
-    /*background-color: yellow;*/
-    background: url("../images/index-background2.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(255, 25, 25);
 }
 
 .experience-container {
@@ -127,9 +123,7 @@ ol.carousel-indicators {
 
 /*****************Skills***************/
 #Skills {
-    /*background-color: dodgerblue;*/
-    background: url("../images/index-background3.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(77, 184, 77);
 }
 
 .other-skills {
@@ -160,9 +154,7 @@ ol.carousel-indicators {
 
 /*****************Education***************/
 #Education {
-    /*background-color: violet;*/
-    background: url("../images/index-background4.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(209, 163, 25);
 }
 
 .school-logo {
@@ -172,9 +164,7 @@ ol.carousel-indicators {
 
 /*****************Contact***************/
 #Contact {
-    /*background-color: red;*/
-    background: url("../images/index-background5.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(255, 255, 0);
 }
 
 .contactform-message {
@@ -187,9 +177,7 @@ ol.carousel-indicators {
 
 /*****************Hobbies***************/
 #Hobbies {
-    /*background-color: aquamarine;*/
-    background: url("../images/index-background6.png") no-repeat center center;
-    background-size: cover;
+    background-color: rgb(25, 71, 117);
 }
 
 /*****************Footer***************/
@@ -289,6 +277,6 @@ ol.carousel-indicators {
     font-style: italic !important;
 }
 
-.content-section {
+/*.content-section {
     background: none !important;
-}
+}*/
