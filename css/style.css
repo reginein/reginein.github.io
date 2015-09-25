@@ -95,7 +95,7 @@ ol.carousel-indicators {
 }
 /*****************About***************/
 #About {
-    background-color: rgb(194, 194, 163);
+    background-color: rgb(128, 128, 128);
     padding-left: 0;
     padding-right: 0;
 }
@@ -203,6 +203,7 @@ ol.carousel-indicators {
         position: absolute;
         bottom: 0;
     }
+
 /*****************Helper Classes***************/
 
 @media all and (orientation: landscape) {
@@ -276,7 +277,3 @@ ol.carousel-indicators {
 .-italic-font {
     font-style: italic !important;
 }
-
-/*.content-section {
-    background: none !important;
-}*/
