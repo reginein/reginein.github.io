@@ -22,7 +22,7 @@ html {
     display: inline-block;
 }
 
-    .social-icons-mini .social-icon {
+    .social-icons-mini .social-icon-rounded {
         border-radius: 40px;
     }
 
@@ -47,6 +47,7 @@ body {
     width: 100%;
     position: relative;
     padding-top: 60px; /*do not remove this, Regine*/
+    font-family: 'Calibri', sans-serif;
 }
 
 .body-content {
@@ -59,6 +60,7 @@ body {
     padding-top: 60px;
     /*padding-bottom: 30px;*/
     height: auto;
+    z-index: -1000;
 }
 
 @media all and (orientation: landscape) {
@@ -111,7 +113,7 @@ ol.carousel-indicators {
 
 /*****************Experience***************/
 #Experience {
-    background-color: rgb(255, 25, 25);
+    background-color: rgba(128, 0, 0, 0.5);
 }
 
 .experience-container {
@@ -157,9 +159,21 @@ ol.carousel-indicators {
     background-color: rgb(209, 163, 25);
 }
 
-.school-logo {
-    max-width: 75px;
-    max-height: 75px;
+
+@media all and (max-width: 480px) {
+    .school-logo {
+        max-width: 75px;
+        max-height: 75px;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media all and (min-width: 481px) {
+    .school-logo {
+        max-width: 100px;
+        max-height: 100px;
+    }
 }
 
 /*****************Contact***************/
@@ -172,7 +186,33 @@ ol.carousel-indicators {
 }
 
 .contact-address {
-    margin-bottom: 10px;
+    margin-bottom: 5vw;
+}
+
+.social-inline{
+    /*margin-right: 1vw;*/
+    margin-bottom: 2vw;
+    /*font-size: 1.5vw;*/
+}
+
+@media all and (max-width: 480px) {
+    .social-inline {
+        padding-left: 35px;
+        padding-bottom: 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+}
+
+@media all and (min-width: 481px) {
+    .social-inline {
+        padding-left: 45px;
+        padding-bottom: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+        border-radius: 10px;
+    }
 }
 
 /*****************Hobbies***************/

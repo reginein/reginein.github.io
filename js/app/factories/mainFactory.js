@@ -142,7 +142,7 @@
         var education = [
             {
                 course: "Bachelor of Science in Computer Science",
-                school: "Polytechnic University of the Philippines - Main",
+                school: "Polytechnic University of the Philippines - Sta. Mesa, Manila",
                 duration: "June 2011- April 2015",
                 schoolLogo: "images/PUPLogo.png",
                 imgAlt: "PUP logo"
