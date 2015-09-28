@@ -107,7 +107,7 @@
             },
             {
                 name: "Node.js",
-                image: "images/logos/nodejs.svg"
+                image: "images/logos/nodejs-icon.svg"
             },
             {
                 name: "Bootstrap",
@@ -115,11 +115,11 @@
             },
             {
                 name: "AngularJS",
-                image: "images/logos/angularjs.svg"
+                image: "images/logos/angularjs-icon.svg"
             },
             {
                 name: "BackboneJS",
-                image: "images/logos/backbonejs.svg"
+                image: "images/logos/backbonejs-icon.svg"
             },
             {
                 name: "Express",

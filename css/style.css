@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Harry Potter";
+    src: url(../fonts/Harry-P.ttf.woff);
+}
+
 html {
     background-color: #e3e3e3;
 }
@@ -27,7 +32,9 @@ html {
     }
 
 .banner-navbar-collapse {
-    font-family: 'Comic Sans MS';
+    font-family: 'Harry Potter';
+    letter-spacing: 2px;
+    text-transform: capitalize;
     text-align: center;
 }
 
@@ -47,11 +54,11 @@ body {
     width: 100%;
     position: relative;
     padding-top: 60px; /*do not remove this, Regine*/
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .body-content {
-    background-color: rgba(255, 255, 255, 0.75);
+    /*background-color: rgba(255, 255, 255, 0.75);*/
     padding: 0;
 }
 
@@ -59,6 +66,7 @@ body {
     /*background-color: rgba(255, 255, 255, 0.5);*/
     padding-top: 60px;
     position: relative;
+    overflow: hidden;
     /*padding-bottom: 30px;*/
     /*height: auto;*/
     /*z-index: -1000;*/
@@ -113,7 +121,8 @@ ol.carousel-indicators {
 }
 /*****************About***************/
 #About {
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(163, 71, 25);
+    color: antiquewhite;
     padding-left: 0;
     padding-right: 0;
 }
@@ -130,7 +139,7 @@ ol.carousel-indicators {
 /*****************Experience***************/
 #Experience {
     background-color: rgb(128, 0, 0);
-    color: darkgray;
+    color: lightpink;
 }
 
 .experience-container {
@@ -142,7 +151,8 @@ ol.carousel-indicators {
 
 /*****************Skills***************/
 #Skills {
-    background-color: rgb(77, 184, 77);
+    background-color: rgb(51, 51, 51);
+    color: wheat;
 }
 
 .other-skills {
@@ -159,8 +169,10 @@ ol.carousel-indicators {
 
 @media all and (min-width: 480px) {
     .other-skills .skill-img {
-        max-width: 150px;
-        max-height: 45px;
+        /*max-height: 50px;*/
+        max-width: 100px;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -173,7 +185,8 @@ ol.carousel-indicators {
 
 /*****************Education***************/
 #Education {
-    background-color: rgb(209, 163, 25);
+    background-color: rgb(77, 184, 77);    
+    
 }
 
 
@@ -195,7 +208,9 @@ ol.carousel-indicators {
 
 /*****************Contact***************/
 #Contact {
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(209, 163, 25);
+    color: black;
+    /*background-color: rgb(255, 255, 0);*/
 }
 
 .contactform-message {
@@ -235,6 +250,7 @@ ol.carousel-indicators {
 /*****************Hobbies***************/
 #Hobbies {
     background-color: rgb(25, 71, 117);
+    color: aqua;
 }
 
 /*****************Footer***************/
