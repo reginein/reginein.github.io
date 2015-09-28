@@ -66,7 +66,7 @@
             <div class="collapse navbar-collapse banner-navbar-collapse" id="myNavBar">
                 <ul class="nav navbar-nav banner-navbar-nav" role="navbar-nav">
                     <li data-index="1" ng-click="main.scroll($event)"><a href="#1">ABOUT ME</a></li>
-                    <li data-index="2" ng-click="main.scroll($event)"><a href="#2">WORK EXPERIENCE</a></li>
+                    <li data-index="2" ng-click="main.scroll($event)"><a href="#2">WORK EXPERIENCES</a></li>
                     <li data-index="3" ng-click="main.scroll($event)"><a href="#3">SKILLS</a></li>
                     <li data-index="4" ng-click="main.scroll($event)"><a href="#4">EDUCATION</a></li>
                     <li data-index="5" ng-click="main.scroll($event)"><a href="#5">CONTACT ME</a></li>
@@ -77,7 +77,7 @@
     </nav>
     <div class="body-content" role="onepage-scroller">
         <div id="About" class="container-fluid content-section" role="content-section">
-            <div class="container">
+            <div class="container content">
                 <!--<carousel id="myCarousel" interval="main.myInterval" no-wrap="main.noWrapSlides" ng-animate="false">
                     <slide class="slide" ng-repeat="slide in main.aboutMeSlides" active="slide.active">
                         <img ng-src="{{slide.image}}" style="margin:auto;" alt="{{slide.alt}}">
@@ -91,12 +91,13 @@
                     <a class="btn btn-lg btn-microsoft -h4" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME </a>
                 </div>
             </div>
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Experience" class="container-fluid content-section" role="content-section">
-            <div class="section-header">
-                <span><i class="glyphicon glyphicon-briefcase"></i> Work Experience</span>
+            <div class="section-header content">
+                <span><i class="glyphicon glyphicon-briefcase"></i> Work Experiences</span>
             </div>
-            <div class="container">
+            <div class="container content">
                 <carousel id="experienceCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides" resize>
                     <slide class="slide" ng-repeat="experience in main.workExperiences">
                         <div class="carousel-content">
@@ -142,12 +143,13 @@
                     </div>
                 </div>-->
             </div>
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Skills" class="container-fluid content-section" role="content-section">
-            <div class="section-header">
+            <div class="section-header content">
                 <span><i class="glyphicon glyphicon-wrench"></i> Technical Skills</span>
             </div>
-            <div class="container">
+            <div class="container content">
                 <carousel id="skillsCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
                     <slide class="slide">
                         <div class="carousel-content">
@@ -180,12 +182,13 @@
                     </div>
                 </div>-->
             </div>
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Education" class="container-fluid content-section" role="content-section">
-            <div class="section-header">
+            <div class="section-header content">
                 <span><i class="glyphicon glyphicon-education"></i> Education</span>
             </div>
-            <div class="container">
+            <div class="container content">
                 <carousel id="educationCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
                     <slider class="slide" ng-repeat="education in main.education">
                         <div class="carousel-content">
@@ -205,12 +208,13 @@
                     </slider>
                 </carousel>
             </div>
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Contact" class="container-fluid content-section" role="content-section">
-            <div class="section-header">
+            <div class="section-header content">
                 <span><i class="glyphicon glyphicon-earphone"></i> Contact Me</span>
             </div>
-            <div class="text-center contact-address">
+            <div class="text-center contact-address content">
                 <p class="-h3 -bold-font">
                     <i class="fa fa-map-marker"></i> Caloocan City, Metro Manila, Philippines<br />
                     <a href="{{main.accounts.email}}"
@@ -219,7 +223,7 @@
                     </a>
                 </p>
             </div>  
-            <div class="text-center">
+            <div class="text-center content">
                 <a class="btn btn-social btn-linkedin social-inline" href="{{main.accounts.linkedin}}"
                    target="_blank" title="LinkedIn">
                     <i class="fa fa-linkedin"></i> LinkedIn
@@ -297,14 +301,16 @@
                         </div>
                 </form>
             </div>-->
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Hobbies" class="container-fluid content-section" role="content-section">
-            <div class="section-header">
+            <div class="section-header content">
                 <span><i class="glyphicon glyphicon-headphones"></i> Hobbies and Trivias About Me</span>
             </div>
-            <div class="container -h3">
+            <div class="container -h3 content">
                 This section is under construction. 
             </div>
+            <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
     </div>
     <!--<div class="footer">
