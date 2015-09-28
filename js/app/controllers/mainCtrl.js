@@ -11,7 +11,10 @@ angular.module('app').controller("MainController",
         vm.otherSkills = MainFactory.getOtherSkills();
         vm.socialAccountsCaption = MainFactory.getSocialAccountsCaption();
         vm.education = MainFactory.getEducation();
-
+        vm.scroll = function ($event) {
+            $('*[role~="onepage-scroller"]').moveTo($event.currentTarget.attributes['data-index'].value);
+            //alert($event.currentTarget.attributes['data-index'].value);
+        }
         //vm.setCarouselHeight= function(id) {
         //    var slideHeight = [];
         //    $(id + ' .item').each(function () {
@@ -43,7 +46,7 @@ angular.module('app').controller("MainController",
             //    });
             //}
 
-            $("#rightsReservedYear").text(new Date().getFullYear());
+            //$("#rightsReservedYear").text(new Date().getFullYear());
 
             $(".zoom-images").zoomScroller({
                 initZoom: 1.15,                          // This option let you define the initial scale of the image before it starts animating. 1 is normal size. Increase/decrease this value by decimal points to get the zoom you want. (2 is equivalent to 200% width x height). The default value is 1.15.
@@ -57,15 +60,20 @@ angular.module('app').controller("MainController",
                 offsetBottom: 200,                       // This allows you to define the bottom offset before the animation is initiated. The default value 200 so the animation will initiate only when at least 200 pixels of the element are visible from the bottom of the viewport.
             });
 
-            $(".main").onepage_scroll({
-                sectionContainer: ".content-section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+            $('*[role~="onepage-scroller"]').onepage_scroll({
+                sectionContainer: '*[role~="content-section"]',     // sectionContainer accepts any kind of selector in case you don't want to use section
                 easing: "linear",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                 // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
                 animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
                 pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
                 updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-                beforeMove: function (index) { },  // This option accepts a callback function. The function will be called before the page moves.
-                afterMove: function (index) { },   // This option accepts a callback function. The function will be called after the page moves.
+                beforeMove: function (index) {
+                    
+                },  // This option accepts a callback function. The function will be called before the page moves.
+                afterMove: function (index) {
+                    $('[role~="navbar-nav"]').children('li').removeClass('active');
+                    $('[role~="navbar-nav"]').children('li[data-index="' + index + '"]').addClass('active');
+                },   // This option accepts a callback function. The function will be called after the page moves.
                 loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
                 keyboard: true,                  // You can activate the keyboard controls
                 responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
@@ -73,6 +81,10 @@ angular.module('app').controller("MainController",
                 // the browser's width is less than 600, the fallback will kick in.
                 direction: "horizontal"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
             });
+
+            $('*[role~="onepage-scroller"]').moveTo(1);
+            $('[role~="navbar-nav"]').children('li').removeClass('active');
+            $('[role~="navbar-nav"]').children('li[data-index="1"]').addClass('active');
             //vm.setCarouselHeight('#experienceCarousel');
         });
 

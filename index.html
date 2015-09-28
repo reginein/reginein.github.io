@@ -64,19 +64,19 @@
                 </a>
             </div>
             <div class="collapse navbar-collapse banner-navbar-collapse" id="myNavBar">
-                <ul class="nav navbar-nav banner-navbar-nav">
-                    <li class="active"><a href="#About">ABOUT ME<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#Experience">WORK EXPERIENCE</a></li>
-                    <li><a href="#Skills">SKILLS</a></li>
-                    <li><a href="#Education">EDUCATION</a></li>
-                    <li><a href="#Contact">CONTACT ME</a></li>
-                    <li><a href="#Hobbies">HOBBIES ETC.</a></li>
+                <ul class="nav navbar-nav banner-navbar-nav" role="navbar-nav">
+                    <li data-index="1" ng-click="main.scroll($event)"><a href="#1">ABOUT ME</a></li>
+                    <li data-index="2" ng-click="main.scroll($event)"><a href="#2">WORK EXPERIENCE</a></li>
+                    <li data-index="3" ng-click="main.scroll($event)"><a href="#3">SKILLS</a></li>
+                    <li data-index="4" ng-click="main.scroll($event)"><a href="#4">EDUCATION</a></li>
+                    <li data-index="5" ng-click="main.scroll($event)"><a href="#5">CONTACT ME</a></li>
+                    <li data-index="6" ng-click="main.scroll($event)"><a href="#6">HOBBIES ETC.</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="body-content main">
-        <div id="About" class="container-fluid content-section">
+    <div class="body-content" role="onepage-scroller">
+        <div id="About" class="container-fluid content-section" role="content-section">
             <div class="container">
                 <!--<carousel id="myCarousel" interval="main.myInterval" no-wrap="main.noWrapSlides" ng-animate="false">
                     <slide class="slide" ng-repeat="slide in main.aboutMeSlides" active="slide.active">
@@ -88,11 +88,11 @@
                     </slide>
                 </carousel>-->
                 <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft -h4" href="#Contact">CONTACT ME </a>
+                    <a class="btn btn-lg btn-microsoft -h4" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME </a>
                 </div>
             </div>
         </div>
-        <div id="Experience" class="container-fluid content-section">
+        <div id="Experience" class="container-fluid content-section" role="content-section">
             <div class="section-header">
                 <span><i class="glyphicon glyphicon-briefcase"></i> Work Experience</span>
             </div>
@@ -143,7 +143,7 @@
                 </div>-->
             </div>
         </div>
-        <div id="Skills" class="container-fluid content-section">
+        <div id="Skills" class="container-fluid content-section" role="content-section">
             <div class="section-header">
                 <span><i class="glyphicon glyphicon-wrench"></i> Technical Skills</span>
             </div>
@@ -181,7 +181,7 @@
                 </div>-->
             </div>
         </div>
-        <div id="Education" class="container-fluid content-section">
+        <div id="Education" class="container-fluid content-section" role="content-section">
             <div class="section-header">
                 <span><i class="glyphicon glyphicon-education"></i> Education</span>
             </div>
@@ -206,13 +206,13 @@
                 </carousel>
             </div>
         </div>
-        <div id="Contact" class="container-fluid content-section">
+        <div id="Contact" class="container-fluid content-section" role="content-section">
             <div class="section-header">
                 <span><i class="glyphicon glyphicon-earphone"></i> Contact Me</span>
             </div>
             <div class="text-center contact-address">
                 <p class="-h3 -bold-font">
-                    <i class="fa fa-home"></i> Caloocan City, Metro Manila, Philippines<br />
+                    <i class="fa fa-map-marker"></i> Caloocan City, Metro Manila, Philippines<br />
                     <a href="{{main.accounts.email}}"
                        target="_blank" title="Email">
                         <i class="fa fa-envelope"></i> reginegracein@gmail.com
@@ -298,7 +298,7 @@
                 </form>
             </div>-->
         </div>
-        <div id="Hobbies" class="container-fluid content-section">
+        <div id="Hobbies" class="container-fluid content-section" role="content-section">
             <div class="section-header">
                 <span><i class="glyphicon glyphicon-headphones"></i> Hobbies and Trivias About Me</span>
             </div>
