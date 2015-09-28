@@ -122,10 +122,6 @@
                 image: "images/logos/backbonejs-icon.svg"
             },
             {
-                name: "Express",
-                image: "images/logos/express.svg"
-            },
-            {
                 name: "Java",
                 image: "images/logos/java.svg"
             },
