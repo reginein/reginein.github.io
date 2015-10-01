@@ -13,7 +13,6 @@ angular.module('app').controller("MainController",
         vm.education = MainFactory.getEducation();
         vm.scroll = function ($event) {
             $('*[role~="onepage-scroller"]').moveTo($event.currentTarget.attributes['data-index'].value);
-            //alert($event.currentTarget.attributes['data-index'].value);
         }
         //vm.setCarouselHeight= function(id) {
         //    var slideHeight = [];
@@ -32,22 +31,6 @@ angular.module('app').controller("MainController",
         //}
 
         $(document).ready(function () {
-            //if ($("#skillsCanvas").length > 0) {
-            //    var ctx = $("#skillsCanvas").get(0).getContext("2d");
-            //    var chart = new Chart(ctx).HorizontalBar(vm.skills, {
-            //        responsive: true,
-            //        barShowStroke: false,
-            //        scaleOverride: true,
-            //        scaleSteps: 10,
-            //        scaleStepWidth: 1,
-            //        scaleStartValue: 0,
-            //        scaleFontColor: "black",
-            //        //scaleFontSize: 14,
-            //    });
-            //}
-
-            //$("#rightsReservedYear").text(new Date().getFullYear());
-
             $(".zoom-images").zoomScroller({
                 initZoom: 1.15,                          // This option let you define the initial scale of the image before it starts animating. 1 is normal size. Increase/decrease this value by decimal points to get the zoom you want. (2 is equivalent to 200% width x height). The default value is 1.15.
                 zoom: 1,                                 // This is the option that determine whether to zoom in or out when animating. If you want to zoom in, make sure this value is more than initZoom. If not, then this value must be lower than initZoom. The default value is 1.

@@ -26,8 +26,6 @@
     <script language="javascript" type="text/javascript" src="js/lib/angular-animate.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
-    <!--<script language="javascript" type="text/javascript" src="js/lib/Chart.js"></script>-->
-    <!--<script language="javascript" type="text/javascript" src="js/lib/Chart.HorizontalBar.js"></script>-->
     <script language="javascript" type="text/javascript" src="js/app/app.js"></script>
 
     <!-- ANGULAR CUSTOM -->
@@ -80,19 +78,16 @@
     </nav>
     <div class="body-content" role="onepage-scroller">
         <div id="About" class="container-fluid content-section" role="content-section">
-            <div class="container -h3 content">
-                Hi! I'm Regine In and I'm a software developer from the beautiful country of the Philippines! 
-                <!--<carousel id="myCarousel" interval="main.myInterval" no-wrap="main.noWrapSlides" ng-animate="false">
-                    <slide class="slide" ng-repeat="slide in main.aboutMeSlides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:auto;" alt="{{slide.alt}}">
-                        <div class="carousel-caption">
-                            <h4></h4>
-                            <p></p>
+            <div class="container content">
+                <carousel id="aboutCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides" resize>
+                    <slide class="slide">
+                        <div class="-h3 text-center">
+                            Hi! I'm Regine In and I'm a software developer from the beautiful country of the Philippines! 
                         </div>
                     </slide>
-                </carousel>-->
+                </carousel>
                 <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft -h4" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME </a>
+                    <a class="btn btn-lg btn-microsoft -h4 btn-contact-me" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME </a>
                 </div>
             </div>
             <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
@@ -129,23 +124,6 @@
                         </div>
                     </slide>
                 </carousel>
-                <!--<div class="row container experience-container" ng-repeat="experience in main.workExperiences">
-                    <div class="row">
-                        <div class="col-md-7 col-lg-7">
-                            <span class="-large-font -bold-font">{{experience.jobTitle}} at {{experience.company}}</span>
-                            <em>({{experience.location}})</em>
-                        </div>
-                        <div class="col-md-5 col-lg-5">
-                            {{experience.duration}}
-                        </div>
-                    </div>
-                    <div class="row container">
-                        <b><em>Achievement Highlights:</em></b>
-                        <ul>
-                            <li ng-repeat="achievement in experience.achievements">{{achievement}}</li>
-                        </ul>
-                    </div>
-                </div>-->
             </div>
             <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
@@ -172,19 +150,6 @@
                         </div>
                     </slide>
                 </carousel>
-                <!--<div class="center-block" style="width: inherit; height: inherit;">
-                    <canvas id="skillsCanvas" height="20%" width="70%"></canvas>
-                </div>-->
-                <!--<span class="-large-font">I also have experience with...</span>
-                <div class="container">
-                    <div class="row">
-                        <ul class="other-skills" ng-repeat="skill in main.otherSkills">
-                            <li title="{{skill.name}}">
-                                <img class="skill-img" ng-src="{{skill.image}}" alt="{{skill.name}}" />
-                            </li>
-                        </ul>
-                    </div>
-                </div>-->
             </div>
             <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
@@ -249,62 +214,6 @@
                     <i class="fa fa-instagram"></i> Instagram
                 </a>
             </div>
-            <!--<div class="social-icons">
-                <a class="btn btn-social btn-linkedin col-md-2" href="{{main.accounts.linkedin}}"
-                   target="_blank" title="{{main.socialAccountsCaption.linkedin}}">
-                    <i class="fa fa-linkedin"></i>{{main.socialAccountsCaption.linkedin}}
-                </a>
-                <a class="btn btn-social btn-github col-md-2" href="{{main.accounts.github}}"
-                   target="_blank" title="{{main.socialAccountsCaption.github}}">
-                    <i class="fa fa-github"></i>{{main.socialAccountsCaption.github}}
-                </a>
-                <a class="btn btn-social btn-facebook col-md-2" href="{{main.accounts.facebook}}"
-                   target="_blank" title="{{main.socialAccountsCaption.facebook}}">
-                    <i class=" fa fa-facebook"></i>{{main.socialAccountsCaption.facebook}}
-                </a>
-                <a class="btn btn-social btn-twitter col-md-2" href="{{main.accounts.twitter}}"
-                   target="_blank" title="{{main.socialAccountsCaption.twitter}}">
-                    <i class="fa fa-twitter"></i>{{main.socialAccountsCaption.twitter}}
-                </a>
-                <a class="btn btn-social btn-instagram col-md-2" href="{{main.accounts.instagram}}"
-                   target="_blank" title="{{main.socialAccountsCaption.instagram}}">
-                    <i class="fa fa-instagram"></i>{{main.socialAccountsCaption.instagram}}
-                </a>
-            </div>-->
-            <!--<div class="col-md-6 col-lg-6 col-xs-10 col-sm-8 col-md-offset-3 col-lg-offset-3 col-sm-offset-2 col-xs-offset-1">
-                <div class="text-center contact-address">
-                    <p class="-h4 -bold-font">
-                        <i class="fa fa-home"></i> Caloocan City, Metro Manila, Philippines<br />
-                        <i class="fa fa-envelope"></i> reginegracein@gmail.com
-                    </p>
-                </div>
-                <div class="row">
-                    <span class="-h4">Send me a quick e-mail here...</span>
-                </div>
-                <form class="form-horizontal -h4" role="form">
-                    <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <label class="control-label" for="name">Name:</label>
-                                    <input type="text" class="form-control -h4" id="name" placeholder="Your name">
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <label class="control-label" for="email">Email:</label>
-                                    <input type="email" class="form-control -h4" id="email" placeholder="Your email">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12">
-                                    <label class="control-label" for="message">Message:</label>
-                                    <textarea class="form-control contactform-message -h4" id="contactform-message" placeholder="Your message"></textarea>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <button type="submit" class="btn btn-info center-block -h4">Submit</button>
-                            </div>
-                        </div>
-                </form>
-            </div>-->
             <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
         <div id="Hobbies" class="container-fluid content-section" role="content-section">
@@ -317,27 +226,5 @@
             <img class="background-img" src="http://www.themesltd.com/headers2/harry_potter_glasses_scar.png">
         </div>
     </div>
-    <!--<div class="footer">
-        <div class="rights-reserved">
-            <p><i class="fa fa-copyright"></i>&nbsp;<span id="rightsReservedYear"></span> All Rights Reserved.</p>
-        </div>
-        <div class="text-center social-icons-mini">
-            <a class="btn btn-social-icon btn-github social-icon-rounded" href="{{main.accounts.github}}" target="_blank" title="Github">
-                <i class="fa fa-github"></i>
-            </a>
-            <a class="btn btn-social-icon btn-linkedin social-icon-rounded" href="{{main.accounts.linkedin}}" target="_blank" title="LinkedIn">
-                <i class="fa fa-linkedin"></i>
-            </a>
-            <a class="btn btn-social-icon btn-facebook social-icon-rounded" href="{{main.accounts.facebook}}" target="_blank" title="Facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a class="btn btn-social-icon btn-twitter social-icon-rounded" href="{{main.accounts.twitter}}" target="_blank" title="Twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a class="btn btn-social-icon btn-instagram social-icon-rounded" href="{{main.accounts.instagram}}" target="_blank" title="Instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-        </div>
-    </div>-->
 </body>
 </html>

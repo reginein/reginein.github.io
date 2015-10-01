@@ -177,6 +177,9 @@ ol.carousel-indicators {
     padding-top: 70px;
 }
 
+.btn-contact-me {
+    margin: 2vw;
+}
 /*****************Experience***************/
 #Experience {
     background-color: rgb(128, 0, 0);
