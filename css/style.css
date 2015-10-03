@@ -125,7 +125,7 @@ body {
         width: 100%;
         height: 100%;
         z-index: 1;
-        opacity: 0.1;
+        opacity: 0.2;
     }
 
 @media all and (orientation: landscape) {
@@ -212,18 +212,22 @@ ol.carousel-indicators {
     }
 
 @media all and (min-width: 480px) {
-    .other-skills .skill-img {
-        /*max-height: 50px;*/
-        max-width: 100px;
+    .other-skills li {
+        max-width: 120px;
+    }
+    .other-skills .skill-img{
         width: 100%;
         height: auto;
     }
 }
 
 @media all and (max-width: 480px) {
-    .other-skills .skill-img {
+    .other-skills li {
         max-width: 50px;
-        /*max-height: 35px;*/
+        width: 100%;
+        height: auto;
+    }
+    .other-skills .skill-img{
         width: 100%;
         height: auto;
     }

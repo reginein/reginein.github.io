@@ -26,6 +26,7 @@
     <script language="javascript" type="text/javascript" src="js/lib/angular-animate.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap.js"></script>
     <script language="javascript" type="text/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lib/particles.js"></script>
     <script language="javascript" type="text/javascript" src="js/app/app.js"></script>
 
     <!-- ANGULAR CUSTOM -->
@@ -76,18 +77,18 @@
             </div>
         </div>
     </nav>
-    <div class="body-content" role="onepage-scroller">
+    <div id="particles-js" class="body-content" role="onepage-scroller">
         <div id="About" class="container-fluid content-section" role="content-section">
             <div class="container content">
                 <carousel id="aboutCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides" resize>
                     <slide class="slide">
                         <div class="-h3 text-center">
-                            Hi! I'm Regine In and I'm a software developer from the beautiful country of the Philippines! 
+                            Hi! I'm Regine In and I'm a software developer from the beautiful country of the Philippines!
                         </div>
                     </slide>
                 </carousel>
                 <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft -h4 btn-contact-me" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME </a>
+                    <a class="btn btn-lg btn-microsoft -h4 btn-contact-me" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME NOW!</a>
                 </div>
             </div>
             <img class="background-img" src="images/index-background1.png">
@@ -143,7 +144,8 @@
                             <div class="container">
                                 <ul class="other-skills" ng-repeat="skill in main.otherSkills">
                                     <li title="{{skill.name}}">
-                                        <img class="skill-img" ng-src="{{skill.image}}" alt="{{skill.name}}" />
+                                        <img class="skill-img center-block" ng-src="{{skill.image}}" alt="{{skill.name}}" />
+                                        <p class="text-center -h4">{{skill.name}}</p>
                                     </li>
                                 </ul>
                             </div>
@@ -191,7 +193,7 @@
                         <i class="fa fa-envelope"></i> reginegracein@gmail.com
                     </a>
                 </p>
-            </div>  
+            </div>
             <div class="text-center content">
                 <a class="btn btn-social btn-linkedin social-inline" href="{{main.accounts.linkedin}}"
                    target="_blank" title="LinkedIn">
@@ -221,7 +223,7 @@
                 <span><i class="glyphicon glyphicon-headphones"></i> Hobbies and Trivias About Me</span>
             </div>
             <div class="container -h3 content">
-                This section is under construction. 
+                This section is under construction.
             </div>
             <img class="background-img" src="images/index-background1.png">
         </div>

@@ -61,7 +61,7 @@
                 duration: "April 1, 2015 - October 15, 2015",
                 achievements: [
                     "Helped in the development of Scrum Online, a project management tool specially " +
-                        "designed for scrum projects utilizing Node.js, Backbone, Faye, Express and MongoDB",
+                        "designed for scrum projects utilizing Node.js, Backbone, Faye messaging and MongoDB",
                     "Helped in the maintenance of custom SharePoint projects to enhance user satisfaction"
 
                 ]
@@ -72,11 +72,8 @@
                 location: "Makati City, Philippines",
                 duration: "March 2014 - May 2014",
                 achievements: [
-                    "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
-                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend." +
-                        "Developed a computer software for the company’s Pre-Employment Assessment Test, " +
-                        "utilizing C# .NET programming language for frontend and Microsoft SQL Server for backend.",
-                    "Developed a computer software for the company’s Pre-Employment Assessment Test, "
+                    "Developed a computer software to automate the company’s Pre-Employment Assessment Test, " +
+                        "utilizing C# .NET and Microsoft SQL Server"
                 ]
             }
         ];

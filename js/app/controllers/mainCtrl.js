@@ -69,6 +69,9 @@ angular.module('app').controller("MainController",
             $('[role~="navbar-nav"]').children('li').removeClass('active');
             $('[role~="navbar-nav"]').children('li[data-index="1"]').addClass('active');
             //vm.setCarouselHeight('#experienceCarousel');
+            particlesJS.load('particles-js', 'js/lib/particlesjs.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
         });
 
         
