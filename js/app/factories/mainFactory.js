@@ -93,6 +93,49 @@
             ]
         };
 
+        var skills = [
+            {
+                name: "Javascript",
+                image: "images/logos/javascript.svg",
+                score: 4.5
+            },
+            {
+                name: "jQuery",
+                image: "images/logos/jquery.svg",
+                score: 4.5
+            },
+            {
+                name: "HTML",
+                image: "images/logos/html.svg",
+                score: 5
+            },
+            {
+                name: "NoSQL (MongoDB)",
+                image: "images/logos/mongodb.svg",
+                score: 5
+            },
+            {
+                name: "SQL (MySQL)",
+                image: "images/logos/mysql.svg",
+                score: 5
+            },
+            {
+                name: "CSS",
+                image: "images/logos/css.svg",
+                score: 3
+            },
+            {
+                name: "C#",
+                image: "images/logos/csharp.png",
+                score: 4.5
+            },
+            {
+                name: "Git",
+                image: "images/logos/git.svg",
+                score: 5
+            }
+        ];
+
         var otherSkills = [
             {
                 name: "PHP",
