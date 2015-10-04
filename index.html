@@ -88,7 +88,7 @@
                     </slide>
                 </carousel>
                 <div class="text-center">
-                    <a class="btn btn-lg btn-microsoft -h4 btn-contact-me" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME NOW!</a>
+                    <a class="btn btn-lg btn-vk -h4 -bold-font btn-contact-me" href="#5" data-index="5" ng-click="main.scroll($event)">CONTACT ME NOW!</a>
                 </div>
             </div>
             <img class="background-img" src="images/index-background1.png">
@@ -135,7 +135,13 @@
             <div class="container content">
                 <carousel id="skillsCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
                     <slide class="slide">
-                        <div class="carousel-content">
+                        <div class="carousel-content" ng-repeat="skill in main.skills">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active -bold-font" role="progressbar" aria-valuenow="skill.score" 
+                                     aria-valuemin="0" aria-valuemax="100" style="width:{{skill.score}}%; background-color:{{skill.color}}; color:black;">
+                                    <p class="skill-label">{{skill.name}} ({{skill.score}}%)</p>
+                                </div>
+                            </div>
                         </div>
                     </slide>
                     <slide class="slide">

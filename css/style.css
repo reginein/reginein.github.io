@@ -47,18 +47,23 @@ html {
         }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media all and (min-width: 769px) and (max-width: 1024px) {
     .social-icons-mini {
         display: none;
     }
 }
 
-@media (min-width: 769px) and (max-width: 875px) {
+@media all and (min-width: 769px) and (max-width: 875px) {
     .banner-navbar-nav li:last-child {
         display: none;
     }
 }
 
+@media all and (max-width: 768px){    
+    .banner-navbar-collapse {
+        font-size: 18px;
+    }
+}
 .banner-navbar-collapse {
     font-family: 'Harry Potter';
     letter-spacing: 2px;
@@ -83,7 +88,6 @@ body {
     width: 100%;
     position: relative;
     padding-top: 60px; /*do not remove this, Regine*/
-    font-family: 'Arial', sans-serif;
 }
 
 /*@media (min-width: 875px) and (max-width: 1024px) {
@@ -153,6 +157,10 @@ body {
         width: auto;
     }
 
+    .carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left{
+        font-size: 50px;
+    }
+
 .carousel-content {
     text-align: left;
 }
@@ -178,7 +186,9 @@ ol.carousel-indicators {
 }
 
 .btn-contact-me {
+    color: black;
     margin: 2vw;
+    border-radius: 0;
 }
 /*****************Experience***************/
 #Experience {
@@ -197,6 +207,23 @@ ol.carousel-indicators {
 #Skills {
     /*background-color: rgb(51, 51, 51);
     color: wheat;*/
+}
+
+.progress{
+    width: 70%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar{
+    text-align: right;
+    font-size: 18px;
+}
+
+.progress-bar .skill-label{
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .other-skills {
@@ -283,7 +310,6 @@ ol.carousel-indicators {
         padding-bottom: 5px;
         font-size: 12px;
         line-height: 1.5;
-        border-radius: 3px;
     }
 }
 
@@ -293,7 +319,6 @@ ol.carousel-indicators {
         padding-bottom: 5px;
         font-size: 18px;
         line-height: 1.5;
-        border-radius: 10px;
     }
 }
 

@@ -55,7 +55,7 @@
 
         var workExperiences = [
             {
-                jobTitle: "Software Developer and Systems Support Specialist",
+                jobTitle: "Software Developer",
                 company: "Seansoft Corporation",
                 location: "Ortigas Center, Pasig City, Philippines",
                 duration: "April 1, 2015 - October 15, 2015",
@@ -78,61 +78,61 @@
             }
         ];
 
-        var skills = {
-            labels: ["Git", "C#", "CSS", "SQL (MySQL)", "NoSQL (MongoDB)",
-                    "HTML", "JQuery", "Back-end Development", "JavaScript"],
-            datasets: [
-	  			{
-	  			    fillColor: "rgba(209,35,197,0.5)",
-	  			    //strokeColor: "rgba(220,220,220,0.8)",
-	  			    //highlightFill: "rgba(220,220,220,0.75)",
-	  			    //highlightStroke: "rgba(220,220,220,1)",
-	  			    data: [9, 7, 7, 9, 8,
-	  			            9, 8, 8, 8]
-	  			}
-            ]
-        };
+        //var skills = {
+        //    labels: ["Git", "C#", "CSS", "SQL (MySQL)", "NoSQL (MongoDB)",
+        //            "HTML", "JQuery", "Back-end Development", "JavaScript"],
+        //    datasets: [
+	  	//		{
+	  	//		    fillColor: "rgba(209,35,197,0.5)",
+	  	//		    //strokeColor: "rgba(220,220,220,0.8)",
+	  	//		    //highlightFill: "rgba(220,220,220,0.75)",
+	  	//		    //highlightStroke: "rgba(220,220,220,1)",
+	  	//		    data: [9, 7, 7, 9, 8,
+	  	//		            9, 8, 8, 8]
+	  	//		}
+        //    ]
+        //};
 
         var skills = [
             {
-                name: "Javascript",
-                image: "images/logos/javascript.svg",
-                score: 4.5
-            },
-            {
                 name: "jQuery",
-                image: "images/logos/jquery.svg",
-                score: 4.5
+                score: 95,
+                color: "#3063A5"
             },
             {
                 name: "HTML",
-                image: "images/logos/html.svg",
-                score: 5
+                score: 95,
+                color: "#FF6600"
             },
             {
                 name: "NoSQL (MongoDB)",
-                image: "images/logos/mongodb.svg",
-                score: 5
+                score: 95,
+                color: "#339966"
             },
             {
                 name: "SQL (MySQL)",
-                image: "images/logos/mysql.svg",
-                score: 5
+                score: 95,
+                color: "#00ccff"
             },
             {
-                name: "CSS",
-                image: "images/logos/css.svg",
-                score: 3
+                name: "Javascript",
+                score: 90,
+                color: "#fefa17"
             },
             {
                 name: "C#",
-                image: "images/logos/csharp.png",
-                score: 4.5
+                score: 80,
+                color: "#4973AB"
+            },
+            {
+                name: "CSS",
+                score: 75,
+                color: "#1D7CF2"
             },
             {
                 name: "Git",
-                image: "images/logos/git.svg",
-                score: 5
+                score: 95,
+                color: "#ee4000"
             }
         ];
 
