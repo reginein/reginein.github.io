@@ -72,6 +72,13 @@ angular.module('app').controller("MainController",
             particlesJS.load('particles-js', 'js/lib/particlesjs.json', function () {
                 console.log('callback - particles.js config loaded');
             });
+
+            $("*").each(function () {
+                var cur = $(this);
+                if (cur.css("cursor") == "auto" || cur.css("cursor") == "pointer") {
+                    cur.css("cursor", "url(../images/defaultcursor.cur), auto");
+                }
+            });
         });
 
         

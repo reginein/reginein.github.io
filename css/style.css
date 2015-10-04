@@ -5,7 +5,6 @@
 
 html {
     background-color: #e3e3e3;
-    cursor: url(../images/defaultcursor.png), auto;
 }
 
 .banner {
@@ -163,8 +162,8 @@ ol.carousel-indicators {
 }
 /*****************About***************/
 #About {
-    background-color: rgb(163, 71, 25);
-    color: antiquewhite;
+    /*background-color: rgb(163, 71, 25);
+    color: antiquewhite;*/
     padding-left: 0;
     padding-right: 0;
 }
@@ -183,8 +182,8 @@ ol.carousel-indicators {
 }
 /*****************Experience***************/
 #Experience {
-    background-color: rgb(128, 0, 0);
-    color: lightpink;
+    /*background-color: rgb(128, 0, 0);
+    color: lightpink;*/
 }
 
 .experience-container {
@@ -196,8 +195,8 @@ ol.carousel-indicators {
 
 /*****************Skills***************/
 #Skills {
-    background-color: rgb(51, 51, 51);
-    color: wheat;
+    /*background-color: rgb(51, 51, 51);
+    color: wheat;*/
 }
 
 .other-skills {
@@ -236,7 +235,7 @@ ol.carousel-indicators {
 
 /*****************Education***************/
 #Education {
-    background-color: rgb(77, 184, 77);    
+    /*background-color: rgb(77, 184, 77);*/    
     
 }
 
@@ -259,8 +258,8 @@ ol.carousel-indicators {
 
 /*****************Contact***************/
 #Contact {
-    background-color: rgb(209, 163, 25);
-    color: black;
+    /*background-color: rgb(209, 163, 25);
+    color: black;*/
     /*background-color: rgb(255, 255, 0);*/
 }
 
@@ -300,8 +299,8 @@ ol.carousel-indicators {
 
 /*****************Hobbies***************/
 #Hobbies {
-    background-color: rgb(25, 71, 117);
-    color: aqua;
+    /*background-color: rgb(25, 71, 117);
+    color: aqua;*/
 }
 
 /*****************Footer***************/
@@ -400,4 +399,9 @@ ol.carousel-indicators {
 
 .-italic-font {
     font-style: italic !important;
+}
+
+.content-section {
+    background-color: rgb(51, 51, 51) !important;
+    color: wheat !important;
 }
