@@ -139,7 +139,7 @@
                         <div class="carousel-content" ng-repeat="skill in main.skills">
                             <div class="progress">
                                 <div class="progress-bar progress-bar-striped active -h4 -bold-font" role="progressbar" aria-valuenow="skill.score" 
-                                     aria-valuemin="0" aria-valuemax="100" style="width:{{skill.score}}%; background-color:{{skill.color}}; color:black;">
+                                     aria-valuemin="0" aria-valuemax="100" ng-style="{'width':'{{skill.score}}%', 'background-color':'{{skill.color}}', 'color':'black'}">
                                     <p class="skill-label">{{skill.name}} ({{skill.score}}%)</p>
                                 </div>
                             </div>
