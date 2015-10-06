@@ -18,15 +18,28 @@
     width: 130px;
 }
 
+.social-icons-mini .social-icon-rounded {
+    border-radius: 40px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+    .social-icons-mini .social-icon-rounded:hover {
+        -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+
 @media all and (min-width: 765px) {
     .social-icons-mini {
         padding: 5px;
         display: inline-block;
     }
-
-        .social-icons-mini .social-icon-rounded {
-            border-radius: 40px;
-        }
 }
     
 @media all and (max-width: 765px) {
@@ -36,9 +49,13 @@
     }
 
         .social-icons-mini .social-icon-rounded {
-            border-radius: 40px;
             display: block;
             margin: 20px;
+            height: 22px;
+            width: 22px;
+            padding: 0;
+            font-size: 12px;
+            line-height: 1.5;
         }
 }
 
@@ -181,10 +198,20 @@ ol.carousel-indicators {
 }
 
 .btn-contact-me {
+    background-color: rgba(216,191,216, 0.3);
     color: black;
     margin: 2vw;
     border-radius: 0;
 }
+
+    .btn-contact-me:hover {
+        background-color: rgba(216,191,216, 0.5);
+        color: antiquewhite;
+    }
+
+    .btn-contact-me:visited {
+        color: antiquewhite;
+    }
 
 /*****************Experience***************/
 #Experience {
@@ -206,6 +233,7 @@ ol.carousel-indicators {
     height: 40px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0;
 }
 
 @media all and (max-width: 480px){
@@ -299,7 +327,37 @@ ol.carousel-indicators {
 
 .social-inline{
     margin-bottom: 2vw;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    background-color: rgba(216,191,216, 0.3) !important;
+    color: antiquewhite;
 }
+
+    .social-inline:hover {
+        background-color: rgba(216,191,216, 0.5) !important;
+        color: antiquewhite;
+    }
+
+    .social-inline:visited {
+        color: antiquewhite;
+    }
+
+    .social-inline .fa {
+        -webkit-transition: all 0.3s linear;
+         -moz-transition: all 0.3s linear;
+           -o-transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+    }
+    
+    .social-inline .fa:hover {
+        -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 
 @media all and (max-width: 480px) {
     .social-inline {
