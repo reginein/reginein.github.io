@@ -179,9 +179,16 @@
             {
                 course: "Bachelor of Science in Computer Science",
                 school: "Polytechnic University of the Philippines - Sta. Mesa, Manila",
-                duration: "June 2011- April 2015",
+                duration: "June 2011 - April 2015",
                 schoolLogo: "images/PUPLogo.png",
                 imgAlt: "PUP logo"
+            },
+            {
+                course: "Engineering and Science Education Program (ESEP)",
+                school: "Caloocan High School",
+                duration: "June 2007 - April 2011",
+                schoolLogo: "images/ESEPLogo.png",
+                imgAlt: "ESEP logo"
             }
         ];
 

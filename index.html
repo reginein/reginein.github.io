@@ -167,10 +167,10 @@
                 <span><i class="glyphicon glyphicon-education"></i> Education</span>
             </div>
             <div class="container content">
-                <carousel id="educationCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
-                    <slider class="slide" ng-repeat="education in main.education">
-                        <div class="carousel-content">
-                            <div class="col-md-10 col-lg-10 col-sm-10">
+                <!--<carousel id="educationCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">-->
+                    <div ng-repeat="education in main.education">
+                        <!--<div class="carousel-content">-->
+                            <div class="col-md-10 col-lg-10 col-sm-10 education">
                                 <p>
                                     <b class="-h3">{{education.course}}</b>
                                     <br />
@@ -182,9 +182,9 @@
                             <div class="col-md-2 col-lg-2 col-sm-2">
                                 <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
                             </div>
-                        </div>
-                    </slider>
-                </carousel>
+                        <!--</div>-->
+                    </div>
+                <!--</carousel>-->
             </div>
             <!--<img class="background-img" src="images/index-background1.png">-->
         </div>
@@ -193,14 +193,21 @@
                 <span><i class="glyphicon glyphicon-earphone"></i> Contact Me</span>
             </div>
             <div class="text-center contact-address content">
-                <p class="-h3 -bold-font">
-                    <i class="fa fa-map-marker"></i> Caloocan City, Metro Manila, Philippines<br />
+                <p class="-h3">
+                    <span title="Address">
+                        <i class="fa fa-map-marker"></i>
+                        Caloocan City, Metro Manila, Philippines
+                    </span>
+                    <br />
                     <a href="{{main.accounts.email}}"
                        target="_blank" title="Email">
                         <i class="fa fa-envelope"></i> reginegracein@gmail.com
                     </a>
                 </p>
             </div>
+            <p class="-h3 col-md-offset-1 col-lg-offset-1">
+                Connect with me on these sites:
+            </p>
             <div class="text-center content">
                 <div class="row">
                     <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6 col-md-offset-1 col-lg-offset-1">
@@ -239,7 +246,7 @@
         </div>
         <div id="Hobbies" class="container-fluid content-section" role="content-section">
             <div class="section-header content">
-                <span><i class="glyphicon glyphicon-headphones"></i> Mini Game</span>
+                <span><i class="fa fa-gamepad"></i> Mini Game</span>
             </div>
             <div class="container -h3 content">
                 Here's a mini game I made especially for you, but it's still under construction.
