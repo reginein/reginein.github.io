@@ -107,6 +107,8 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;*/
     /*background-size: cover;*/
+    font-family: 'Delius', cursive;
+    letter-spacing: 1.2px;
     height: 100%;
     width: 100%;
     position: relative;
@@ -325,8 +327,12 @@ ol.carousel-indicators {
 #Contact {
 }
 
-.contactform-message {
-    height: 400px;
+.email-link {
+ color: rgb(147,112,219);
+}
+
+.email-link:hover {
+ color: rgb(147,112,219);
 }
 
 .contact-address {
@@ -357,6 +363,14 @@ ol.carousel-indicators {
            -o-transition: all 0.3s linear;
           -ms-transition: all 0.3s linear;
               transition: all 0.3s linear;
+    }
+
+    .social-inline:hover .fa{
+        -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
     
     .social-inline .fa:hover {
