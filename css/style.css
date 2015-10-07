@@ -327,17 +327,33 @@ ol.carousel-indicators {
 #Contact {
 }
 
+.contact-address {
+    margin-bottom: 5vw;
+}
+
 .email-link {
  color: rgb(147,112,219);
 }
 
-.email-link:hover {
- color: rgb(147,112,219);
-}
+    .email-link:hover {
+     color: rgb(147,112,219);
+    }
 
-.contact-address {
-    margin-bottom: 5vw;
-}
+    .email-link .fa {
+        -webkit-transition: all 0.3s linear;
+         -moz-transition: all 0.3s linear;
+           -o-transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+    }
+
+    .email-link:hover .fa{
+        -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 
 .social-inline{
     margin-bottom: 2vw;
