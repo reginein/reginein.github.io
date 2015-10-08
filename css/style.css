@@ -183,7 +183,7 @@ body {
     }
 
     .carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left{
-        font-size: 50px;
+        /*font-size: 50px;*/
     }
 
 .carousel-content {
@@ -191,7 +191,8 @@ body {
 }
 
 ol.carousel-indicators {
-    display: none;
+    /*display: none;*/
+    bottom: -30px !important;
 }
 
 /*****************About***************/
@@ -277,6 +278,10 @@ ol.carousel-indicators {
         padding: 0;
     }
 
+.other-skill-label {
+    letter-spacing: 1px;
+}
+
 @media all and (min-width: 480px) {
     .other-skills li {
         max-width: 120px;
@@ -339,6 +344,10 @@ ol.carousel-indicators {
      color: rgb(147,112,219);
     }
 
+    .email-link:visited {
+     color: rgb(147,112,219);
+    }
+
     .email-link .fa {
         -webkit-transition: all 0.3s linear;
          -moz-transition: all 0.3s linear;
@@ -382,14 +391,6 @@ ol.carousel-indicators {
     }
 
     .social-inline:hover .fa{
-        -webkit-transform: rotate(360deg);
-            -moz-transform: rotate(360deg);
-            -o-transform: rotate(360deg);
-            -ms-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }
-    
-    .social-inline .fa:hover {
         -webkit-transform: rotate(360deg);
             -moz-transform: rotate(360deg);
             -o-transform: rotate(360deg);

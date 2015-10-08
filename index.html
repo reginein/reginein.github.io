@@ -71,7 +71,7 @@
                     <li data-index="3" ng-click="main.scroll($event)"><a href="#3">SKILLS</a></li>
                     <li data-index="4" ng-click="main.scroll($event)"><a href="#4">EDUCATION</a></li>
                     <li data-index="5" ng-click="main.scroll($event)"><a href="#5">CONTACT ME</a></li>
-                    <li data-index="6" ng-click="main.scroll($event)"><a href="#6">FUN</a></li>
+                    <li data-index="6" ng-click="main.scroll($event)"><a href="#6">MINI-GAME</a></li>
                 </ul>
             </div>
         </div>
@@ -108,10 +108,10 @@
                                     {{experience.duration}}
                                 </div>
                             </div>
-                            <div class="-h4 -italic-font" style="margin-right: 0;">
+                            <div class="-h3 -italic-font" style="margin-right: 0;">
                                 ({{experience.location}})
                             </div>
-                            <div class="-h3 -bold-font" style="margin-right: 0;">
+                            <div class="-h3" style="margin-right: 0;">
                                 Achievement Highlights:
                             </div>
                             <div class="row" style="margin-right: 0;">
@@ -149,7 +149,7 @@
                                 <ul class="other-skills" ng-repeat="skill in main.otherSkills">
                                     <li title="{{skill.name}}">
                                         <img class="skill-img center-block" ng-src="{{skill.image}}" alt="{{skill.name}}" />
-                                        <p class="text-center -h4">{{skill.name}}</p>
+                                        <p class="text-center -h4 other-skill-label">{{skill.name}}</p>
                                     </li>
                                 </ul>
                             </div>
@@ -163,20 +163,20 @@
                 <span><i class="glyphicon glyphicon-education"></i> Education</span>
             </div>
             <div class="container content">
-                    <div ng-repeat="education in main.education">
-                            <div class="col-md-10 col-lg-10 col-sm-10 education">
-                                <p>
-                                    <b class="-h3">{{education.course}}</b>
-                                    <br />
-                                    <span class="-h3">{{education.school}}</span>
-                                    <br />
-                                    <span class="-h3 -italic-font">{{education.duration}}</span>
-                                </p>
-                            </div>
-                            <div class="col-md-2 col-lg-2 col-sm-2">
-                                <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
-                            </div>
+                <div ng-repeat="education in main.education">
+                    <div class="col-md-10 col-lg-10 col-sm-10 education">
+                        <p>
+                            <b class="-h3">{{education.course}}</b>
+                            <br />
+                            <span class="-h3">{{education.school}}</span>
+                            <br />
+                            <span class="-h3 -italic-font">{{education.duration}}</span>
+                        </p>
                     </div>
+                    <div class="col-md-2 col-lg-2 col-sm-2">
+                        <img class="school-logo" ng-src="{{education.schoolLogo}}" alt="{{education.imgAlt}}" />
+                    </div>
+                </div>
             </div>
         </div>
         <div id="Contact" class="container-fluid content-section" role="content-section">

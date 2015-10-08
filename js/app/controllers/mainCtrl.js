@@ -14,21 +14,21 @@ angular.module('app').controller("MainController",
         vm.scroll = function ($event) {
             $('*[role~="onepage-scroller"]').moveTo($event.currentTarget.attributes['data-index'].value);
         }
-        //vm.setCarouselHeight= function(id) {
-        //    var slideHeight = [];
-        //    $(id + ' .item').each(function () {
-        //        // add all slide heights to an array
-        //        slideHeight.push($(this).height());
-        //    });
+        vm.setCarouselHeight= function(id) {
+            var slideHeight = [];
+            $(id + ' .item').each(function () {
+                // add all slide heights to an array
+                slideHeight.push($(this).height());
+            });
 
-        //    // find the tallest item
-        //    max = Math.max.apply(null, slideHeight);
+            // find the tallest item
+            var max = Math.max.apply(null, slideHeight);
 
-        //    // set the slide's height
-        //    $(id + ' .carousel-content').each(function () {
-        //        $(this).css('height', max + 'px');
-        //    });
-        //}
+            // set the slide's height
+            $(id + ' .carousel-inner').each(function () {
+                $(this).css('height', max + 'px');
+            });
+        }
 
         $(document).ready(function () {
             $(".zoom-images").zoomScroller({
@@ -68,7 +68,10 @@ angular.module('app').controller("MainController",
             $('*[role~="onepage-scroller"]').moveTo(1);
             $('[role~="navbar-nav"]').children('li').removeClass('active');
             $('[role~="navbar-nav"]').children('li[data-index="1"]').addClass('active');
-            //vm.setCarouselHeight('#experienceCarousel');
+
+            vm.setCarouselHeight('#experienceCarousel');
+            vm.setCarouselHeight('#skillsCarousel');
+
             particlesJS.load('particles-js', 'js/lib/particlesjs.json', function () {
                 console.log('callback - particles.js config loaded');
             });
@@ -79,35 +82,12 @@ angular.module('app').controller("MainController",
                     cur.css("cursor", "url(../images/defaultcursor.cur), auto");
                 }
             });
+
+            $(window).on('resize orientationchange', function () {
+                vm.setCarouselHeight('#experienceCarousel');
+                vm.setCarouselHeight('#skillsCarousel');
+            });
         });
 
         
     }]);
-    //.directive('resize', function ($window) {
-    //    return function (scope, element, attr) {
-
-    //        var w = angular.element($window);
-
-    //        setCarouselHeight('#experienceCarousel');
-
-    //        function setCarouselHeight(id) {
-    //            var slideHeight = [];
-    //            $(id + ' .item').each(function () {
-    //                // add all slide heights to an array
-    //                slideHeight.push($(this).height());
-    //            });
-
-    //            // find the tallest item
-    //            max = Math.max.apply(null, slideHeight);
-
-    //            // set the slide's height
-    //            $(id + ' .carousel-content').each(function () {
-    //                $(this).css('height', max + 'px');
-    //            });
-    //        }
-
-    //        w.bind('resize', function () {
-    //            scope.$apply();
-    //        });
-    //    }
-    //});
