@@ -133,8 +133,8 @@
             <div class="container content">
                 <carousel id="skillsCarousel" interval="main.experienceCarouselInterval" no-wrap="main.noWrapSlides">
                     <slide class="slide">
-                        <div class="carousel-content" ng-repeat="skill in main.skills">
-                            <div class="progress">
+                        <div class="carousel-content">
+                            <div class="progress" ng-repeat="skill in main.skills">
                                 <div class="progress-bar progress-bar-striped active -h4 -bold-font" role="progressbar" aria-valuenow="skill.score" 
                                      aria-valuemin="0" aria-valuemax="100" ng-style="{'width':'{{skill.score}}%', 'background-color':'{{skill.color}}', 'color':'black'}">
                                     <p class="skill-label">{{skill.name}} ({{skill.score}}%)</p>

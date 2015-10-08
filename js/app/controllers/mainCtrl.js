@@ -16,7 +16,7 @@ angular.module('app').controller("MainController",
         }
         vm.setCarouselHeight= function(id) {
             var slideHeight = [];
-            $(id + ' .item').each(function () {
+            $(id + ' .carousel-content').each(function () {
                 // add all slide heights to an array
                 slideHeight.push($(this).height());
             });
@@ -25,9 +25,10 @@ angular.module('app').controller("MainController",
             var max = Math.max.apply(null, slideHeight);
 
             // set the slide's height
-            $(id + ' .carousel-inner').each(function () {
+            $(id + ' .item').each(function () {
                 $(this).css('height', max + 'px');
             });
+            console.log(slideHeight);
         }
 
         $(document).ready(function () {

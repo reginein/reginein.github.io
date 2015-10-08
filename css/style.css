@@ -182,17 +182,58 @@ body {
         width: auto;
     }
 
-    .carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left{
-        /*font-size: 50px;*/
+    .carousel-control .glyphicon-menu-left,
+    .carousel-control .glyphicon-menu-right {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      display: inline-block;
+      margin-top: -10px;
+      font-size: 40px;
     }
 
+    @media screen and (max-width: 768px) {
+        .carousel-control .glyphicon-menu-left,
+        .carousel-control .glyphicon-menu-right {
+          font-size: 25px;
+        }
+    }
+
+    .carousel-control .glyphicon-menu-left {
+      left: 0;
+      margin-left: -20px;
+    }
+
+    .carousel-control .glyphicon-menu-right {
+      right: 0;
+      margin-right: -10px;
+    }
+
+
+@media screen and (min-width: 768px) {
+    .carousel-control .glyphicon-chevron-left,
+    .carousel-control .glyphicon-chevron-right {
+        width: auto;
+        height: auto;
+        margin-top: -15px;
+        font-size: 30px;
+    }
+
+    .carousel-control .glyphicon-chevron-left {
+        margin-left: -15px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        margin-right: -15px;
+    }
+}
+
 .carousel-content {
-    text-align: left;
+    text-align: left !important;
 }
 
 ol.carousel-indicators {
-    /*display: none;*/
-    bottom: -30px !important;
+    bottom: -40px !important;
 }
 
 /*****************About***************/
