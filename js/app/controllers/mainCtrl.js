@@ -31,7 +31,7 @@ angular.module('app').controller("MainController",
             console.log(slideHeight);
         }
 
-        $(document).ready(function () {
+        $(window).load(function () {
             $(".zoom-images").zoomScroller({
                 initZoom: 1.15,                          // This option let you define the initial scale of the image before it starts animating. 1 is normal size. Increase/decrease this value by decimal points to get the zoom you want. (2 is equivalent to 200% width x height). The default value is 1.15.
                 zoom: 1,                                 // This is the option that determine whether to zoom in or out when animating. If you want to zoom in, make sure this value is more than initZoom. If not, then this value must be lower than initZoom. The default value is 1.
@@ -84,9 +84,9 @@ angular.module('app').controller("MainController",
                 }
             });
 
-            $(window).on('resize orientationchange', function () {
+            $(window).on('resize orientationchange', function () {   
                 vm.setCarouselHeight('#experienceCarousel');
-                vm.setCarouselHeight('#skillsCarousel');
+                setTimeout(function () { vm.setCarouselHeight('#skillsCarousel') }, 5000);
             });
         });
 
