@@ -86,7 +86,7 @@ angular.module('app').controller("MainController",
 
             $(window).on('resize orientationchange', function () {   
                 vm.setCarouselHeight('#experienceCarousel');
-                setTimeout(function () { vm.setCarouselHeight('#skillsCarousel') }, 1000);
+                setTimeout(function () { vm.setCarouselHeight('#skillsCarousel') }, 2000);
             });
         });
 
