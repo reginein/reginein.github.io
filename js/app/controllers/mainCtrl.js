@@ -16,11 +16,15 @@ angular.module('app').controller("MainController",
         }
         vm.setCarouselHeight= function(id) {
             var slideHeight = [];
-            $(id + ' .carousel-content').each(function () {
+            var slides = $(id + ' .slide');
+            slides.removeClass('active');
+            slides.each(function () {
                 // add all slide heights to an array
-                slideHeight.push($(this).height());
+                $(this).addClass('active');
+                slideHeight.push($(this).find('.carousel-content').height());
+                $(this).removeClass('active');
             });
-
+            $(id + ' .slide:first').addClass('active');
             // find the tallest item
             var max = Math.max.apply(null, slideHeight);
 
@@ -86,7 +90,7 @@ angular.module('app').controller("MainController",
 
             $(window).on('resize orientationchange', function () {   
                 vm.setCarouselHeight('#experienceCarousel');
-                setTimeout(function () { vm.setCarouselHeight('#skillsCarousel') }, 2000);
+                vm.setCarouselHeight('#skillsCarousel');
             });
         });
 
