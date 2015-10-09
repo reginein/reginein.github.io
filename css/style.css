@@ -233,7 +233,7 @@ body {
 }
 
 ol.carousel-indicators {
-    bottom: -20px !important;
+    bottom: -30px !important;
 }
 
 /*****************About***************/
@@ -244,6 +244,11 @@ ol.carousel-indicators {
 
 .social-icons {
     padding-top: 70px;
+}
+
+#aboutCarousel{
+    margin-top: 10vw;
+    margin-bottom: 10vw;
 }
 
 .btn-contact-me {
@@ -509,6 +514,11 @@ ol.carousel-indicators {
     .-h3 {
         font-size: 3.5vw !important;
         line-height: 1.2 !important;
+    }
+
+    .-h31 {
+        font-size: 3.5vw !important;
+        line-height: 1.75 !important;
     }
 
     .-h4 {
