@@ -246,9 +246,32 @@ ol.carousel-indicators {
     padding-top: 70px;
 }
 
-#aboutCarousel{
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+@media all and (orientation: landscape){
+    #aboutCarousel{
+        margin-top: 5vw;
+        margin-bottom: 3vw;
+    }
+}
+
+@media all and (orientation: portrait){
+    #aboutCarousel{
+        margin-top: 15vw;
+        margin-bottom: 10vw;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .regine-img {
+        max-width: 75px;
+        max-height: 75px;
+    }
+}
+
+@media all and (min-width: 481px) {
+    .regine-img {
+        max-width: 150px;
+        max-height: 150px;
+    }
 }
 
 .btn-contact-me {
@@ -482,6 +505,11 @@ ol.carousel-indicators {
     .-h3 {
         font-size: 2.5vw !important;
         line-height: 1.2 !important;
+    }
+
+    .-h31 {
+        font-size: 2.5vw !important;
+        line-height: 1.75 !important;
     }
 
     .-h4 {
